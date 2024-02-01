@@ -1,0 +1,246 @@
+.owl-carousel {
+    margin-top: 95px;
+
+    /* background: yellow; */
+}
+
+@media screen and (max-width: 640px) {
+    .owl-carousel {
+        margin-bottom: 20px;
+    }
+}
+
+.owl-carousel .owl-stage {
+    height: 620px;
+}
+
+@media screen and (max-width: 480px) {
+    .owl-carousel .owl-stage {
+        height: auto;
+    }
+}
+
+.owl-carousel .item {
+    height: 41rem;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font-size: 9em;
+    margin: 0;
+}
+
+@media screen and (max-width: 640px) {
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel button.owl-dot {
+        font-size: x-large;
+    }
+}
+
+.owl-carousel .owl-next {
+    position: absolute;
+    right: -45px;
+    top: 25%;
+}
+
+@media screen and (max-width: 640px) {
+    .owl-carousel .owl-next {
+        position: inherit;
+    }
+}
+
+.owl-carousel .owl-prev {
+    position: absolute;
+    left: -45px;
+    top: 130px;
+}
+
+@media screen and (max-width: 640px) {
+    .owl-carousel .owl-prev {
+        position: inherit;
+    }
+}
+
+.owl-theme .owl-nav {
+    background: transparent;
+    color: #333;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: transparent;
+    color: #8a4701;
+}
+
+.owl-theme .owl-dots {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .owl-theme .owl-dots {
+        position: inherit;
+        bottom: auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .owl-theme .owl-dots {
+        position: inherit;
+        bottom: auto;
+    }
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 14px;
+    height: 14px;
+
+    /* background: #866455; */
+    margin: 5px 4px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #3a661b;
+}
+
+.owl-item > .item {
+    cursor: pointer;
+    margin: 0% 15%;
+    text-align: center;
+}
+
+.owl-item > .item a {
+    color: #4e3623;
+}
+
+.owl-item.active > .item h4 {
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.owl-item.center > .item h4 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-top: 3rem;
+}
+
+.owl-item.center > .item {
+    cursor: auto;
+    margin: 0% -16%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+    .owl-item.center > .item {
+        /* background: pink; */
+        width: 768px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .owl-item.center > .item {
+        /* background: gray; */
+        width: 640px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .owl-item.center > .item {
+        /* background: rgb(199, 128, 128); */
+        width: 480px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .owl-item.center > .item {
+        /* background: black; */
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .owl-item.center > .item {
+        /* background: black; */
+        width: 240px;
+    }
+}
+
+.owl-item:not(.center) > .item {
+    margin-top: 9rem;
+    height: auto;
+}
+
+.owl-item > .item .flex-product {
+    background: #ad6334;
+    height: 264px;
+    width: 264px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #3a661b;
+}
+
+.owl-item > .item .flex-product::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.owl-item.center > .item .flex-product {
+    height: 380px;
+    width: 380px;
+}
+
+@media screen and (max-width: 768px) {
+    .owl-item.center > .item .flex-product {
+        height: 550px;
+        width: 550px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .owl-item.center > .item .flex-product {
+        height: 550px;
+        width: 550px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .owl-item.center > .item .flex-product {
+        height: 300px;
+        width: 300px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .owl-item.center > .item .flex-product {
+        height: 200px;
+        width: 200px;
+        margin: auto;
+    }
+}
+
+.owl-item.center > .item .flex-product::before {
+    content: "";
+    background: transparent;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}

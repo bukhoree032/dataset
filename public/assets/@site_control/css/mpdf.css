@@ -1,0 +1,62 @@
+h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.mb-0 {
+    margin-bottom: 0px !important;
+}
+
+.text-nowrap {
+    white-space: nowrap !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+table.blueTable {
+    border: 1px solid #333;
+    /* background-color: #EEEEEE; */
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.blueTable td,
+table.blueTable th {
+    border: 1px solid #333;
+    padding: 5px 2px;
+    /* font-size: 20px; */
+}
+
+table.blueTable tbody td {
+    /* font-size: 24px; */
+}
+
+table.blueTable tr:nth-child(even) {
+    background: #e8eaec;
+}
+
+table.blueTable thead {
+    background: #1C6EA4;
+    /* background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%); */
+    border-bottom: 2px solid #444444;
+}
+
+table.blueTable thead th {
+    /* font-size: 24px;
+    font-weight: bold; */
+    color: #FFFFFF;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    background: #1C6EA4;
+}
+
+table.blueTable thead th:first-child {
+    border-left: none;
+}

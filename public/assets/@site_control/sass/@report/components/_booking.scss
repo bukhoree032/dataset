@@ -1,0 +1,166 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    counter-reset: pages;
+    background-color: #e5e5e5;
+    font-family: 'TH Sarabun New', tahoma, serif !important;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+html {
+    margin-bottom: 30px;
+}
+
+@page {
+    size: A4;
+    margin: 17mm 18mm 0;
+}
+
+@media print {
+    html {
+        margin-bottom: 0;
+    }
+
+    table.statement-view {
+        width: 210mm;
+    }
+
+    html,
+    body {
+        height: 100% !important;
+        margin: auto !important;
+        background-color: #fff;
+    }
+
+    .statement-view td,
+    .statement-view table td {
+        font-size: 22px;
+        line-height: 24px;
+    }
+}
+
+.statement-view,
+.statement-view table {
+    border-collapse: collapse;
+}
+
+.statement-view td,
+.statement-view table td {
+    padding: 0 5px;
+    vertical-align: top;
+    position: relative;
+
+    &.line-bottom {
+        position: relative;
+
+        &:after {
+            content: '';
+            border-bottom: 1px dashed #000 !important;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 5px;
+        }
+    }
+}
+
+.statement-view table td strong {
+    white-space: nowrap;
+}
+
+.statement-view td .footer-note {
+    position: relative;
+
+    h3 {
+        margin: 10px 0 0;
+        padding: 0;
+    }
+}
+
+.statement-view td .footer-note ul,
+.statement-view td .footer-note ol {
+    margin: 0;
+}
+
+.statement-view td .footer-note ul {
+    list-style: none;
+    padding-left: 30px;
+}
+
+.statement-view table td {
+    border-top: 0;
+}
+
+.statement-view table tr:last-child td {
+    border-bottom: 0;
+}
+
+.statement-view table td:last-child {
+    border-right: 0;
+}
+
+.statement-view table td:first-child {
+    border-left: 0;
+}
+
+.statement-view td.statement-header {
+    line-height: 30px;
+    text-align: center;
+    position: relative;
+
+    .header-logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.statement-view td.statement-header h3 {
+    font-size: 34px;
+    margin: 0 0 2px;
+    padding: 36px 0 0;
+}
+
+.statement-view.table-payment td {
+    line-height: normal;
+}
+
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-indent-10 {
+    text-indent: 10px;
+}
+
+.text-indent-50 {
+    text-indent: 50px;
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Aside",
+    "alias": "aside",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Aside\\Providers\\AsideServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

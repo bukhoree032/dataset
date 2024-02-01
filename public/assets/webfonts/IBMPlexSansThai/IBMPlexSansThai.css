@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'IBMPlex Sans Thai';
+    src: url('../../webfonts/IBMPlexSansThai/IBMPlexSansThai-SemiBold.eot');
+    src: url('../../webfonts/IBMPlexSansThai/IBMPlexSansThai-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../../webfonts/IBMPlexSansThai/IBMPlexSansThai-SemiBold.woff') format('woff'),
+    url('../../webfonts/IBMPlexSansThai/IBMPlexSansThai-SemiBold.ttf') format('truetype'),
+    url('../../webfonts/IBMPlexSansThai/IBMPlexSansThai-SemiBold.svg#IBMPlexSansThai-SemiBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBMPlex Sans Thai';
+    src: url('../../webfonts/IBMPlexSansThai/IBMPlexSansThai-Regular.eot');
+    src: url('../../webfonts/IBMPlexSansThai/IBMPlexSansThai-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../webfonts/IBMPlexSansThai/IBMPlexSansThai-Regular.woff') format('woff'),
+    url('../../webfonts/IBMPlexSansThai/IBMPlexSansThai-Regular.ttf') format('truetype'),
+    url('../../webfonts/IBMPlexSansThai/IBMPlexSansThai-Regular.svg#IBMPlexSansThai') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

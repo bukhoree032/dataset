@@ -1,0 +1,13 @@
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    height: 21px;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    width: 100%;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}

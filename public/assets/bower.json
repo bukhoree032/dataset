@@ -1,0 +1,20 @@
+{
+  "name": "assets",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Taveevut Nakomah <nakomah.web@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "select2": "^4.0.13"
+  }
+}

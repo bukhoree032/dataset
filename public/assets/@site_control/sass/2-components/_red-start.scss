@@ -1,0 +1,13 @@
+.red-start {
+    position: relative;
+    display: initial;
+
+    &::after {
+        content: '*';
+        color: red;
+        font-size: 20px;
+        position: absolute;
+        top: -3px;
+        right: -10px;
+    }
+}

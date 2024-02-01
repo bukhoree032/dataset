@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'TH Sarabun New';
+    src: url('../../webfonts/THSarabunNew/THSarabunNew-Bold.eot');
+    src: url('../../webfonts/THSarabunNew/THSarabunNew-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../webfonts/THSarabunNew/THSarabunNew-Bold.woff') format('woff'),
+        url('../../webfonts/THSarabunNew/THSarabunNew-Bold.ttf') format('truetype'),
+        url('../../webfonts/THSarabunNew/THSarabunNew-Bold.svg#THSarabunNew-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TH Sarabun New';
+    src: url('../../webfonts/THSarabunNew/THSarabunNew.eot');
+    src: url('../../webfonts/THSarabunNew/THSarabunNew.eot?#iefix') format('embedded-opentype'),
+        url('../../webfonts/THSarabunNew/THSarabunNew.woff') format('woff'),
+        url('../../webfonts/THSarabunNew/THSarabunNew.ttf') format('truetype'),
+        url('../../webfonts/THSarabunNew/THSarabunNew.svg#THSarabunNew') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
