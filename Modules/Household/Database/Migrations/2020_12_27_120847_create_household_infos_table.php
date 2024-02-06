@@ -27,6 +27,7 @@ class CreateHouseholdInfosTable extends Migration
             $table->string('HOUSEHOLD_INFO_COMMU_NAME')->nullable();
             $table->text('HOUSEHOLD_INFO_ADDRESS')->nullable();
             $table->string('HOUSEHOLD_INFO_HOUSE_CODE')->nullable();
+            $table->string('HOUSEHOLD_INFO_CITIZENNUMBER')->nullable();
             $table->string('HOUSEHOLD_INFO_HOUSE_NEAR')->nullable();
             $table->string('HOUSEHOLD_INFO_SOI')->nullable();
             $table->string('HOUSEHOLD_INFO_ROAD')->nullable();

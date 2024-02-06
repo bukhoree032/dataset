@@ -79,6 +79,9 @@
                     <label><b>รหัสประจำบ้าน :</b> {{ $result->householdInfo->HOUSEHOLD_INFO_HOUSE_CODE }} </label>
                 </div>
                 <div class="col-md-4 mb-3">
+                    <label><b>เลขประจำตัวประชาชน :</b> {{ $result->householdInfo->HOUSEHOLD_INFO_CITIZENNUMBER }} </label>
+                </div>
+                <div class="col-md-4 mb-3">
                     <label><b>บ้านใกล้เคียงเลขที่ :</b> {{ $result->householdInfo->HOUSEHOLD_INFO_HOUSE_NEAR }} </label>
                 </div>
             </div>

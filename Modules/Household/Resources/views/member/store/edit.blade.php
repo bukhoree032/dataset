@@ -14,7 +14,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-row">
-                                    <div class="col-md-2 mb-2">
+                                    
+                                    <input type="hidden" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_ROUND" value="{{ $result->STORE_FORM_ROUND }}" placeholder="หมายเลขแบบสอบถาม"/>
+                                    {{-- <div class="col-md-2 mb-2">
                                         <label class="red-start">เก็บข้อมูลครั้งที่</label>
                                         <select name="STORE_FORM_ROUND" class="form-control @error('STORE_FORM_ROUND') is-invalid @enderror" ng-model="STORE_FORM_ROUND" ng-change="getAmphures(STORE_FORM_ROUND)">
                                             <option value="">เลือกครั้งที่เก็บข้อมูล</option>
@@ -25,7 +27,7 @@
                                             <option value="5">ครั้งที่ 5</option>
                                         </select>
                                         <x-error-message title="STORE_FORM_ROUND"/>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-md-3 mb-3">
                                         <label class="red-start">หมายเลขแบบสอบถาม</label>
                                         <input type="text" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_NUMBER" value="{{ $result->STORE_FORM_NUMBER }}" placeholder="หมายเลขแบบสอบถาม"/>
@@ -36,12 +38,12 @@
                                         <input type="date" class="form-control @error('STORE_DATE') is-invalid @enderror" name="STORE_DATE" value="{{ $result->STORE_DATE }}" placeholder="วันที่สอบถาม"/>
                                         <x-error-message title="STORE_DATE"/>
                                     </div>
-                                    <div class="col-md-2 mb-2">
+                                    <div class="col-md-3 mb-2">
                                         <label class="red-start">เวลา</label>
                                         <input type="time" class="form-control @error('STORE_TIME') is-invalid @enderror" name="STORE_TIME" value="{{ $result->STORE_TIME }}" placeholder="เวลา"/>
                                         <x-error-message title="STORE_TIME"/>
                                     </div>
-                                    <div class="col-md-2 mb-2">
+                                    <div class="col-md-3 mb-2">
                                         <label class="red-start">ถึง</label>
                                         <input type="time" class="form-control @error('STORE_TO_TIME') is-invalid @enderror" name="STORE_TO_TIME" value="{{ $result->STORE_TO_TIME }}" placeholder="ถึง"/>
                                         <x-error-message title="STORE_TO_TIME"/>
@@ -62,7 +64,11 @@
                                         <input type="text" class="form-control" name="STORE_SAVE" value="{{ $result->STORE_SAVE }}" placeholder="ผู้บันทึกข้อมูล"/>
                                     </div>
                                 </div>
-                                <div class="form-row">
+                                
+                                <input type="hidden" class="form-control @error('STORE_PERSON.0') is-invalid @enderror" name="STORE_PERSON[0]" value="{{ $result->STORE_PERSON[0] }}" placeholder="คนที่ 1"/>
+                                <input style='margin-top: -13px;' type="hidden" class="form-control" name="STORE_PERSON[1]" value="{{ $result->STORE_PERSON[1] }}" placeholder="คนที่ 2"/>
+                                <input style='margin-top: -13px;' type="hidden" class="form-control" name="STORE_PERSON[2]" value="{{ $result->STORE_PERSON[1] }}" placeholder="คนที่ 3"/>
+                                {{-- <div class="form-row">
                                     <div class="col-md-12 mb-3">
                                         <div class="card mw-100">
                                             <div class="card-body">
@@ -85,7 +91,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 
                             </div>
                         </div>

@@ -45,6 +45,7 @@
         <td>{{ $value->HOUSEHOLD_INFO_COMMU_NAME }}</td>
         <td>{{ $value->HOUSEHOLD_INFO_ADDRESS }}</td>
         <td>{{ $value->HOUSEHOLD_INFO_HOUSE_CODE }}</td>
+        <td>{{ $value->HOUSEHOLD_INFO_CITIZENNUMBER }}</td>
         <td>{{ $value->HOUSEHOLD_INFO_HOUSE_NEAR }}</td>
         <td>{{ $value->HOUSEHOLD_INFO_SOI }}</td>
         <td>{{ $value->HOUSEHOLD_INFO_ROAD }}</td>

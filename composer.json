@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2.5",
+        "php": "^7.2.5||^8.0",
         "ext-json": "*",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
@@ -18,7 +18,7 @@
         "laravel/ui": "^2.0",
         "maatwebsite/excel": "^3.1",
         "merujan99/laravel-video-embed": "dev-master",
-        "mpdf/mpdf": "^8.0",
+        "mpdf/mpdf": "^6.1",
         "nwidart/laravel-modules": "^6.2",
         "spatie/laravel-permission": "^3.17",
         "verot/class.upload.php": "^2.0"
@@ -51,7 +51,7 @@
             "database/seeds",
             "database/factories"
         ],
-        "files":[
+        "files": [
             "app/Helpers/Datetime_helpers.php",
             "app/Helpers/General_helpers.php",
             "app/Helpers/Section1.php",
@@ -60,7 +60,7 @@
             "app/Helpers/Section4.php",
             "app/Helpers/Section5.php",
             "app/Helpers/Section6.php"
-        ]    
+        ]
     },
     "autoload-dev": {
         "psr-4": {

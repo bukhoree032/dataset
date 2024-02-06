@@ -113,13 +113,16 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="col-md-4 mb-3">
+                                    <div class="col-md-1 mb-3">
                                         <label><b>บ้านเลขที่ :</b> {{ $result->householdInfo->HOUSEHOLD_INFO_ADDRESS }} </label>
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <label><b>รหัสประจำบ้าน :</b> {{ $result->householdInfo->HOUSEHOLD_INFO_HOUSE_CODE }} </label>
                                     </div>
                                     <div class="col-md-4 mb-3">
+                                        <label><b>รหัสประจำบ้าน :</b> {{ $result->householdInfo->HOUSEHOLD_INFO_CITIZENNUMBER }} </label>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
                                         <label><b>บ้านใกล้เคียงเลขที่ :</b> {{ $result->householdInfo->HOUSEHOLD_INFO_HOUSE_NEAR }} </label>
                                     </div>
                                 </div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\BaseMemberManageController;
 use Illuminate\Http\Request;
 use Modules\Household\Http\Requests\HouseholdStoreRequest;
 use Modules\Household\Repositories\StoreRepository as Repository;
+use Modules\Household\Repositories\HouseholdInfoRepository as InfoRepository;
 use Modules\Household\Repositories\HouseholdMemberRepository as MemberRepository;
 use Modules\Household\Repositories\HouseholdEconRepository as EconRepository;
 use Modules\Household\Repositories\HouseholdEnviroRepository as EnviroRepository;
@@ -13,13 +14,15 @@ use Modules\Household\Repositories\HouseholdEnviroRepository as EnviroRepository
 class StoreController extends BaseMemberManageController
 {
     protected $repository;
+    protected $InfoRepository;
     protected $MemberRepository;
     protected $EconRepository;
     protected $EnviroRepository;
 
-    public function __construct(Repository $repository, MemberRepository $MemberRepository, EconRepository $EconRepository, EnviroRepository $EnviroRepository)
+    public function __construct(Repository $repository,InfoRepository $InfoRepository, MemberRepository $MemberRepository, EconRepository $EconRepository, EnviroRepository $EnviroRepository)
     {
         $this->repository = $repository;
+        $this->InfoRepository = $InfoRepository;
         $this->MemberRepository = $MemberRepository;
         $this->EconRepository = $EconRepository;
         $this->EnviroRepository = $EnviroRepository;
@@ -43,8 +46,16 @@ class StoreController extends BaseMemberManageController
      */
     public function create()
     {
+        // $data['provinces'] = $this->getProvinces();
+
+        $data['store_id'] = '1';
         $data['provinces'] = $this->getProvinces();
 
+        $data['scripts'] = [
+            asset('assets/@site_control/js/app/modules/info/controllers/info.controller.js'),
+            asset('assets/@site_control/js/app/modules/info/providers/info.provider.js'),
+        ];
+        // dd($data['scripts']);
         return $this->render('household::member.store.create', $data);
     }
 
@@ -55,23 +66,26 @@ class StoreController extends BaseMemberManageController
      */
     public function store(HouseholdStoreRequest $request)
     {
-//        $a = [
-//            'STORE_DATE' => '2020-12-27',
-//            'STORE_TIME' => '19:06',
-//            'STORE_TO_TIME' => '19:06',
-//            'STORE_COLLECTOR' => 'นายบูคอรี สาเมาะ',
-//            'STORE_CHECK' => 'นายฮาดี ดอเลาะ',
-//            'STORE_SAVE' => 'นางสาวรอกีเยาะ สาและ',
-//            'STORE_PERSON' => [
-//                '0' => 'ผู้ให้คนที่ 1',
-//                '1' => 'ผู้ให้คนที่ 2',
-//                '2' => 'ผู้ให้คนที่ 3'
-//            ],
-//        ];
-//        $result = $this->repository->create($a);
-        $result = $this->repository->create($request->all());
+        // $a = [
+        //     'STORE_DATE' => '2020-12-27',
+        //     'STORE_TIME' => '19:06',
+        //     'STORE_TO_TIME' => '19:06',
+        //     'STORE_FORM_ROUND' => '1',
+        //     'STORE_COLLECTOR' => 'นายบูคอรี สาเมาะ',
+        //     'STORE_CHECK' => 'นายฮาดี ดอเลาะ',
+        //     'STORE_SAVE' => 'นางสาวรอกีเยาะ สาและ',
+        //     'STORE_PERSON' => [
+        //         '0' => 'ผู้ให้คนที่ 1',
+        //         '1' => 'ผู้ให้คนที่ 2',
+        //         '2' => 'ผู้ให้คนที่ 3'],
+        // ];
 
-        return redirect()->route('member.household.info.create', $result->id);
+         $result = $this->repository->create($request->all());
+
+         $id = $result->id;
+         $result = $this->InfoRepository->createinfo($request->all(), $id);
+ 
+         return redirect()->route('member.household.info.member.index', [$id, $result->id]);
     }
 
     /**

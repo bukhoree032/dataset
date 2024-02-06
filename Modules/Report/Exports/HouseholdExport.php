@@ -36,6 +36,7 @@ class HouseholdExport implements FromView, ShouldAutoSize, WithTitle, WithEvents
                 'household_infos.HOUSEHOLD_INFO_COMMU_NAME',
                 'household_infos.HOUSEHOLD_INFO_ADDRESS',
                 'household_infos.HOUSEHOLD_INFO_HOUSE_CODE',
+                'household_infos.HOUSEHOLD_INFO_CITIZENNUMBER',
                 'household_infos.HOUSEHOLD_INFO_HOUSE_NEAR',
                 'household_infos.HOUSEHOLD_INFO_SOI',
                 'household_infos.HOUSEHOLD_INFO_ROAD',

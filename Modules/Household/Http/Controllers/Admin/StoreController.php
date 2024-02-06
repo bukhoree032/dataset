@@ -5,6 +5,7 @@ namespace Modules\Household\Http\Controllers\Admin;
 use App\Http\Controllers\BaseManageController;
 use Modules\Household\Http\Requests\HouseholdStoreRequest;
 use Modules\Household\Repositories\StoreRepository as Repository;
+use Modules\Household\Repositories\HouseholdInfoRepository as InfoRepository;
 use Modules\Household\Repositories\HouseholdMemberRepository as MemberRepository;
 use Modules\Household\Repositories\HouseholdEconRepository as EconRepository;
 use Modules\Household\Repositories\HouseholdEnviroRepository as EnviroRepository;
@@ -12,13 +13,15 @@ use Modules\Household\Repositories\HouseholdEnviroRepository as EnviroRepository
 class StoreController extends BaseManageController
 {
     protected $repository;
+    protected $InfoRepository;
     protected $MemberRepository;
     protected $EconRepository;
     protected $EnviroRepository;
 
-    public function __construct(Repository $repository, MemberRepository $MemberRepository, EconRepository $EconRepository, EnviroRepository $EnviroRepository)
+    public function __construct(Repository $repository,InfoRepository $InfoRepository, MemberRepository $MemberRepository, EconRepository $EconRepository, EnviroRepository $EnviroRepository)
     {
         $this->repository = $repository;
+        $this->InfoRepository = $InfoRepository;
         $this->MemberRepository = $MemberRepository;
         $this->EconRepository = $EconRepository;
         $this->EnviroRepository = $EnviroRepository;
@@ -68,6 +71,8 @@ class StoreController extends BaseManageController
 //        ];
 //        $result = $this->repository->create($a);
         $result = $this->repository->create($request->all());
+        
+        $result = $this->InfoRepository->createinfo($request->all(), $result->id);
 
         return redirect()->route('admin.household.info.create', $result->id);
     }
