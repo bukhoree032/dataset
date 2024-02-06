@@ -61,22 +61,22 @@
                                     </div>
                                 </div>
                                 <div class="form-row mb-3">
-                                    <div class="form-group col-md-2">
+                                    <div class="form-group col-md-1">
                                         <label>บ้านเลขที่</label>
                                         <input type="text" class="form-control @error('HOUSEHOLD_INFO_ADDRESS') is-invalid @enderror" name="HOUSEHOLD_INFO_ADDRESS" value="{{ old('HOUSEHOLD_INFO_ADDRESS') }}" placeholder="บ้านเลขที่"/>
                                         <x-error-message title="HOUSEHOLD_INFO_ADDRESS"/>
                                     </div>
-                                    <div class="form-group col-md-5">
+                                    <div class="form-group col-md-4">
                                         <label>รหัสประจำบ้าน</label>
                                         <input type="text" class="form-control @error('HOUSEHOLD_INFO_HOUSE_CODE') is-invalid @enderror" name="HOUSEHOLD_INFO_HOUSE_CODE" value="{{ old('HOUSEHOLD_INFO_HOUSE_CODE') }}" placeholder="รหัสประจำบ้าน"/>
                                         <x-error-message title="HOUSEHOLD_INFO_HOUSE_CODE"/>
                                     </div>
-                                    <div class="form-group col-md-5">
+                                    <div class="form-group col-md-4">
                                         <label>เลขประจำตัวประชาชน</label>
                                         <input type="text" class="form-control @error('HOUSEHOLD_INFO_CITIZENNUMBER') is-invalid @enderror" name="HOUSEHOLD_INFO_CITIZENNUMBER" value="{{ old('HOUSEHOLD_INFO_CITIZENNUMBER') }}" placeholder="เลขประจำตัวประชาชน"/>
                                         <x-error-message title="HOUSEHOLD_INFO_CITIZENNUMBER"/>
                                     </div>
-                                    <div class="form-group col-md-5">
+                                    <div class="form-group col-md-3">
                                         <label>กรณีไม่มีบ้านเลขที่ บ้านใกล้เคียงเลขที่</label>
                                         <input type="text" class="form-control @error('HOUSEHOLD_INFO_HOUSE_NEAR') is-invalid @enderror" name="HOUSEHOLD_INFO_HOUSE_NEAR" value="{{ old('HOUSEHOLD_INFO_HOUSE_NEAR') }}" placeholder="xxxx-xxxxxx-x"/>
                                         <x-error-message title="HOUSEHOLD_INFO_HOUSE_NEAR"/>
