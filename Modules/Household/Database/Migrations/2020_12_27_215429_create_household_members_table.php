@@ -21,10 +21,10 @@ class CreateHouseholdMembersTable extends Migration
             $table->string('HOUSEHOLD_MEMBER_AGE')->nullable();
             $table->string('HOUSEHOLD_MEMBER_SEX')->nullable();
             $table->string('HOUSEHOLD_MEMBER_DOB')->nullable();
-            $table->integer('HOUSEHOLD_MEMBER_HEIGHT')->nullable();
-            $table->integer('HOUSEHOLD_MEMBER_WEIGHT')->nullable();
-            $table->string('HOUSEHOLD_MEMBER_NATIONALITY')->nullable();
-            $table->string('HOUSEHOLD_MEMBER_RELIGION')->nullable();
+            $table->string('HOUSEHOLD_MEMBER_CITIZENNUMBER')->nullable();
+            // $table->integer('HOUSEHOLD_MEMBER_WEIGHT')->nullable();
+            // $table->string('HOUSEHOLD_MEMBER_NATIONALITY')->nullable();
+            // $table->string('HOUSEHOLD_MEMBER_RELIGION')->nullable();
 
             $table->unsignedBigInteger('household_info_id');
             $table->foreign('household_info_id', 'fk_household_infos_household_members')

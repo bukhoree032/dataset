@@ -43,10 +43,10 @@
             <td>{{ $value->HOUSEHOLD_MEMBER_SEX }}</td>
             <td>{{ $value->HOUSEHOLD_MEMBER_DOB }}</td>
             <td>{{ $value->HOUSEHOLD_MEMBER_AGE }}</td>
-            <td>{{ $value->HOUSEHOLD_MEMBER_HEIGHT }}</td>
-            <td>{{ $value->HOUSEHOLD_MEMBER_WEIGHT }}</td>
+            <td>{{ $value->HOUSEHOLD_MEMBER_CITIZENNUMBER }}</td>
+            {{-- <td>{{ $value->HOUSEHOLD_MEMBER_WEIGHT }}</td>
             <td>{{ $value->HOUSEHOLD_MEMBER_NATIONALITY }}</td>
-            <td>{{ $value->HOUSEHOLD_MEMBER_RELIGION }}</td>
+            <td>{{ $value->HOUSEHOLD_MEMBER_RELIGION }}</td> --}}
 
             <td>{{ $value->HOUSEHOLD_MEMBER_GENERAL_SKILL }}</td>
             <td>{{ $value->HOUSEHOLD_MEMBER_GENERAL_NATIONAL_LANG }}</td>

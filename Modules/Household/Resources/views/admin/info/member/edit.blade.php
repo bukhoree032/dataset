@@ -38,29 +38,29 @@
                 </div>
                 <!-- <div class="form-row" style="margin-top: -25px;"> -->
                 <div class="form-row">
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-6 mb-3">
                         <label class="red-start">วัน/เดือน/ปีเกิด </label>
                         <input type="date" class="form-control" name="HOUSEHOLD_MEMBER_DOB" id="validationCustom20" placeholder="วัน/เดือน/ปีเกิด" value="{{ $result->HOUSEHOLD_MEMBER_DOB }}" required>
                         <div class="invalid-feedback">
                             จำเป็นต้องกรอก
                         </div>
                     </div>
-                    <div class="col-md-4 mb-2">
-                        <label class="red-start">ส่วนสูง(ซม.) </label>
-                        <input type="number" class="form-control" name="HOUSEHOLD_MEMBER_HEIGHT" id="validationCustom21" placeholder="ส่วนสูง(ซม.)" value="{{ $result->HOUSEHOLD_MEMBER_HEIGHT }}" required>
+                    <div class="col-md-6 mb-2">
+                        <label class="red-start">เลขประจำตัวประชาชน </label>
+                        <input type="number" class="form-control" name="HOUSEHOLD_MEMBER_CITIZENNUMBER" id="validationCustom21" placeholder="เลขประจำตัวประชาชน" value="{{ $result->HOUSEHOLD_MEMBER_CITIZENNUMBER }}" required>
                         <div class="invalid-feedback">
                             จำเป็นต้องกรอก
                         </div>
                     </div>
-                    <div class="col-md-4 mb-2">
+                    {{-- <div class="col-md-4 mb-2">
                         <label class="red-start">น้ำหนัก(กก.) </label>
                         <input type="number" class="form-control" name="HOUSEHOLD_MEMBER_WEIGHT" id="validationCustom22" placeholder="น้ำหนัก(กก.)" value="{{ $result->HOUSEHOLD_MEMBER_WEIGHT }}" required>
                         <div class="invalid-feedback">
                             จำเป็นต้องกรอก
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
-                <div class="form-row">
+                {{-- <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label class="red-start">สัญชาติ </label>
                         <input type="text" class="form-control" name="HOUSEHOLD_MEMBER_NATIONALITY" id="validationCustom23" placeholder="สัญชาติ" value="{{ $result->HOUSEHOLD_MEMBER_NATIONALITY }}" required>
@@ -82,7 +82,7 @@
                             จำเป็นต้องกรอก
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="tile-footer">
                     <button type="submit" class="btn btn-primary"><i class="fa-fw fas fa-check-circle"></i>บันทึกข้อมูล</button>
                     <button type="reset" class="btn btn-light"><i class="fa-fw fas fa-times-circle"></i>ยกเลิก</button>

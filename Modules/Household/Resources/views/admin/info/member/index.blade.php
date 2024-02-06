@@ -39,8 +39,8 @@
                             <td>{{ $value->HOUSEHOLD_MEMBER_SEX }}</td>
                             <td>{{ $value->HOUSEHOLD_MEMBER_AGE }}</td>
                             <td>{{ $value->HOUSEHOLD_MEMBER_DOB }}</td>
-                            <td>{{ $value->HOUSEHOLD_MEMBER_NATIONALITY }}</td>
-                            <td>{{ $value->HOUSEHOLD_MEMBER_RELIGION }} </td>
+                            {{-- <td>{{ $value->HOUSEHOLD_MEMBER_NATIONALITY }}</td> --}}
+                            {{-- <td>{{ $value->HOUSEHOLD_MEMBER_RELIGION }} </td> --}}
                             <td width="13%">
                                 <!-- <a href="{{ route('admin.household.info.member.step1',[$store_id, $info_id, $value->id]) }}" class="btn btn-sm btn-info">ข้อมูลเพิ่มเติม</a> -->
                                 <div class="option-link">
@@ -123,29 +123,29 @@
                         </div>
                         <!-- <div class="form-row" style="margin-top: -25px;"> -->
                         <div class="form-row">
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-6 mb-3">
                                 <label class="red-start">วัน/เดือน/ปีเกิด </label>
                                 <input type="date" class="form-control" name="HOUSEHOLD_MEMBER_DOB" id="validationCustom20" placeholder="วัน/เดือน/ปีเกิด" required>
                                 <div class="invalid-feedback">
                                     จำเป็นต้องกรอก
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-2">
-                                <label class="red-start">ส่วนสูง(ซม.) </label>
-                                <input type="number" class="form-control" name="HOUSEHOLD_MEMBER_HEIGHT" id="validationCustom21" placeholder="ส่วนสูง(ซม.)" required>
+                            <div class="col-md-6 mb-2">
+                                <label class="red-start">เลขประจำตัวประชาชน </label>
+                                <input type="number" class="form-control" name="HOUSEHOLD_MEMBER_CITIZENNUMBER" id="validationCustom21" placeholder="ส่วนสูง(ซม.)" required>
                                 <div class="invalid-feedback">
                                     จำเป็นต้องกรอก
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-2">
+                            {{-- <div class="col-md-4 mb-2">
                                 <label class="red-start">น้ำหนัก(กก.) </label>
                                 <input type="number" class="form-control" name="HOUSEHOLD_MEMBER_WEIGHT" id="validationCustom22" placeholder="น้ำหนัก(กก.)" required>
                                 <div class="invalid-feedback">
                                     จำเป็นต้องกรอก
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
-                        <div class="form-row">
+                        {{-- <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label class="red-start">สัญชาติ </label>
                                 <input type="text" class="form-control" name="HOUSEHOLD_MEMBER_NATIONALITY" id="validationCustom23" placeholder="สัญชาติ" required>
@@ -167,7 +167,7 @@
                                     จำเป็นต้องกรอก
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="modal-footer">
                         <!-- <button type="" class="btn btn-secondary" data-dismiss="modal">Close</button> -->

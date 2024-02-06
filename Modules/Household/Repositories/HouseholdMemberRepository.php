@@ -60,9 +60,9 @@ class HouseholdMemberRepository extends BaseRepository
 
         $request['HOUSEHOLD_MEMBER_SEX'] = $sex[$request['HOUSEHOLD_MEMBER_PNAME']];
         
-        list($byear)= explode("-",$request['HOUSEHOLD_MEMBER_DOB']);  
-        $age=date('Y')-$byear;  
-        if($age < 1 ){
+        list($byear)= explode("-",$request['HOUSEHOLD_MEMBER_DOB']); 
+        $age=date('Y')-$byear;
+        if($age < -20 ){
             $age = $age+543;
         }
           
@@ -242,6 +242,25 @@ class HouseholdMemberRepository extends BaseRepository
                 }
             }
         }
+
+        $sex = [
+            'นาย'    => 'ชาย',
+            'นาง'    => 'หญิง',
+            'นางสาว' => 'หญิง',
+            'เด็กชาย' => 'ชาย',
+            'เด็กหญิง' => 'หญิง'
+        ];
+
+        $request['HOUSEHOLD_MEMBER_SEX'] = $sex[$request['HOUSEHOLD_MEMBER_PNAME']];
+        
+        list($byear)= explode("-",$request['HOUSEHOLD_MEMBER_DOB']); 
+        $age=date('Y')-$byear;
+        if($age < -20 ){
+            $age = $age+543;
+        }
+          
+        $request['HOUSEHOLD_MEMBER_AGE'] = $age; 
+        $request['household_info_id'] = (int) request()->info;
 
         $result = $this->classModelName::findOrFail($id);
         $cover = $result->cover;

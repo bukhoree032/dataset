@@ -18,10 +18,10 @@ class HouseholdMemberRequest extends FormRequest
             'HOUSEHOLD_MEMBER_NAME' => ['required'],
             'HOUSEHOLD_MEMBER_SURNAME' => ['required'],
             'HOUSEHOLD_MEMBER_DOB' => ['required'],
-            'HOUSEHOLD_MEMBER_HEIGHT' => ['required'],
-            'HOUSEHOLD_MEMBER_WEIGHT' => ['required'],
-            'HOUSEHOLD_MEMBER_NATIONALITY' => ['required'],
-            'HOUSEHOLD_MEMBER_RELIGION' => ['required'],
+            'HOUSEHOLD_MEMBER_CITIZENNUMBER' => ['required'],
+            // 'HOUSEHOLD_MEMBER_WEIGHT' => ['required'],
+            // 'HOUSEHOLD_MEMBER_NATIONALITY' => ['required'],
+            // 'HOUSEHOLD_MEMBER_RELIGION' => ['required'],
         ];
     }
     /**
@@ -36,10 +36,10 @@ class HouseholdMemberRequest extends FormRequest
             'HOUSEHOLD_MEMBER_NAME.required' => '',
             'HOUSEHOLD_MEMBER_SURNAME.required' => '',
             'HOUSEHOLD_MEMBER_DOB.required' => '',
-            'HOUSEHOLD_MEMBER_HEIGHT.required' => '',
-            'HOUSEHOLD_MEMBER_WEIGHT.required' => '',
-            'HOUSEHOLD_MEMBER_NATIONALITY.required' => '',
-            'HOUSEHOLD_MEMBER_RELIGION.required' => '',
+            'HOUSEHOLD_MEMBER_CITIZENNUMBER.required' => '',
+            // 'HOUSEHOLD_MEMBER_WEIGHT.required' => '',
+            // 'HOUSEHOLD_MEMBER_NATIONALITY.required' => '',
+            // 'HOUSEHOLD_MEMBER_RELIGION.required' => '',
         ];
     }
 

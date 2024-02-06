@@ -15,10 +15,10 @@ class HouseholdMember extends Model
         'HOUSEHOLD_MEMBER_AGE',
         'HOUSEHOLD_MEMBER_SEX',
         'HOUSEHOLD_MEMBER_DOB',
-        'HOUSEHOLD_MEMBER_HEIGHT',
-        'HOUSEHOLD_MEMBER_WEIGHT',
-        'HOUSEHOLD_MEMBER_NATIONALITY',
-        'HOUSEHOLD_MEMBER_RELIGION',
+        'HOUSEHOLD_MEMBER_CITIZENNUMBER',
+        // 'HOUSEHOLD_MEMBER_WEIGHT',
+        // 'HOUSEHOLD_MEMBER_NATIONALITY',
+        // 'HOUSEHOLD_MEMBER_RELIGION',
         'household_info_id'
     ];
 

@@ -68,7 +68,7 @@ class MemberController extends BaseManageController
         //     'HOUSEHOLD_MEMBER_NAME' => 'a',
         //     'HOUSEHOLD_MEMBER_SURNAME' => 'a',
         //     'HOUSEHOLD_MEMBER_DOB' => '2020-12-31',
-        //     'HOUSEHOLD_MEMBER_HEIGHT' => '123',
+        //     'HOUSEHOLD_MEMBER_CITIZENNUMBER' => '123',
         //     'HOUSEHOLD_MEMBER_WEIGHT' => '123',
         //     'HOUSEHOLD_MEMBER_NATIONALITY' => 'a',
         //     'HOUSEHOLD_MEMBER_RELIGION' => 'ศาสนาอิสลาม',

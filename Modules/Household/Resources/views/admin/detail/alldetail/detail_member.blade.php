@@ -30,13 +30,14 @@
                                         <label><b>เพศ :</b> {{ $valueMember->HOUSEHOLD_MEMBER_SEX }} </label>
                                     </div>
                                     <div class="col-md-2 mb-3">
-                                        <label><b>ส่วนสูง :</b> {{ $valueMember->HOUSEHOLD_MEMBER_HEIGHT }} ซม.</label>
+                                        <label><b>เลขประจำตัวประชาชน :</b> {{ $valueMember->HOUSEHOLD_MEMBER_CITIZENNUMBER }} </label>
                                     </div>
                                     <div class="col-md-2 mb-3">
-                                        <label><b>น้ำหนัก :</b> {{ $valueMember->HOUSEHOLD_MEMBER_WEIGHT }} กก.</label>
+                                        <label><b>วัน/เดือน/ปีเกิด :</b> {{ $valueMember->HOUSEHOLD_MEMBER_DOB }}</label>
+                                        {{-- <label><b>น้ำหนัก :</b> {{ $valueMember->HOUSEHOLD_MEMBER_WEIGHT }} กก.</label> --}}
                                     </div>
                                 </div>
-                                <div class="form-row">
+                                {{-- <div class="form-row">
                                     <div class="col-md-4 mb-3">
                                         <label><b>วัน/เดือน/ปีเกิด :</b> {{ $valueMember->HOUSEHOLD_MEMBER_DOB }}</label>
                                     </div>
@@ -46,7 +47,7 @@
                                     <div class="col-md-2 mb-3">
                                         <label><b>ศาสนา :</b> {{ $valueMember->HOUSEHOLD_MEMBER_RELIGION }} </label>
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <!-- ส่วนที่ 1 -->
                                 <div>
