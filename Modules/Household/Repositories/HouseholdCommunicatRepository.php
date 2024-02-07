@@ -31,7 +31,7 @@ class HouseholdCommunicatRepository extends BaseRepository
     public function get($id)
     {
         $result =  $this->classModelName::findOrFail($id);
-        $result->HOUSEHOLD_COMUNICAT_OCCUP_ID = unserialize($result->HOUSEHOLD_COMUNICAT_OCCUP_ID);
+        // $result->HOUSEHOLD_COMUNICAT_OCCUP_ID = unserialize($result->HOUSEHOLD_COMUNICAT_OCCUP_ID);
 
         return $result;
     }

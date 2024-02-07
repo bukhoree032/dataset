@@ -53,13 +53,13 @@ class StoreRepository extends BaseRepository
             }
         }  
 
-        if(isset($result->householdInfo->householdCommunicat)){
-            $result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID = unserialize($result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID);
-            foreach($result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID as $key_OCCUP_ID => $value_OCCUP_ID){
-                $result1[$key_OCCUP_ID] = extract_int($value_OCCUP_ID);
-                $result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID = $result1;
-            }
-        }
+        // if(isset($result->householdInfo->householdCommunicat)){
+        //     // $result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID = unserialize($result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID);
+        //     foreach($result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID as $key_OCCUP_ID => $value_OCCUP_ID){
+        //         $result1[$key_OCCUP_ID] = extract_int($value_OCCUP_ID);
+        //         $result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID = $result1;
+        //     }
+        // }
         
         return $result;
     }

@@ -14,7 +14,7 @@ class HouseholdCommunicatRequest extends FormRequest
     public function rules()
     {
         return [
-            'HOUSEHOLD_COMUNICAT_OCCUP_ID' => ['required'],
+            // 'HOUSEHOLD_COMUNICAT_OCCUP_ID' => ['required'],
         ];
     }
 
@@ -26,7 +26,7 @@ class HouseholdCommunicatRequest extends FormRequest
     public function messages()
     {
         return [
-            'HOUSEHOLD_COMUNICAT_OCCUP_ID.required' => 'โปรดเลือกอย่างน้อย 1 ตัวเลือก',
+            // 'HOUSEHOLD_COMUNICAT_OCCUP_ID.required' => 'โปรดเลือกอย่างน้อย 1 ตัวเลือก',
         ];
     }
 

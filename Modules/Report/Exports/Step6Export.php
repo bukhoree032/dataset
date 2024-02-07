@@ -29,16 +29,16 @@ class Step6Export implements FromView, ShouldAutoSize, WithTitle, WithEvents
         $data = \DB::table('household_infos')
             ->select([
                 'stores.STORE_FORM_NUMBER',
-                'STORE_FORM_NUMBER',
-                'household_communicats.HOUSEHOLD_COMUNICAT_OCCUP_ID'
+                'STORE_FORM_NUMBER'
+                // 'household_communicats.HOUSEHOLD_COMUNICAT_OCCUP_ID'
             ])
             ->join('stores', 'stores.id', '=', 'household_infos.store_id')
             ->join('household_communicats', 'household_communicats.household_info_id', '=', 'household_infos.id')
             ->get();
 
-        foreach ($data as $key => $value) {
-            $data[$key]->HOUSEHOLD_COMUNICAT_OCCUP_ID = unserialize($data[$key]->HOUSEHOLD_COMUNICAT_OCCUP_ID);
-        }
+        // foreach ($data as $key => $value) {
+        //     $data[$key]->HOUSEHOLD_COMUNICAT_OCCUP_ID = unserialize($data[$key]->HOUSEHOLD_COMUNICAT_OCCUP_ID);
+        // }
         // dd($data);
         $this->count = count($data);
 

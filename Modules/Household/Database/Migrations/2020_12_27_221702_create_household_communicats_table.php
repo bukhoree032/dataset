@@ -15,9 +15,10 @@ class CreateHouseholdCommunicatsTable extends Migration
     {
         Schema::create('household_communicats', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('HOUSEHOLD_COMUNICAT_OCCUP_ID')->nullable();
-            $table->string('HOUSEHOLD_COMUNICAT_OCCUP_ID_OTHER')->nullable();
-            $table->text('SUGGESTION')->nullable();
+            $table->string('HOUSEHOLD_COMUNICAT_OCCUP')->nullable();
+            $table->string('HOUSEHOLD_COMUNICAT_STUDY')->nullable();
+            $table->string('HOUSEHOLD_COMUNICAT_SOCIETY')->nullable();
+            $table->string('HOUSEHOLD_COMUNICAT_OTHER')->nullable();
 
             $table->unsignedBigInteger('household_info_id');
             $table->foreign('household_info_id', 'fk_household_infos_household_communicats')

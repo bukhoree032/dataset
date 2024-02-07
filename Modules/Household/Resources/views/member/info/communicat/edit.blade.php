@@ -11,7 +11,7 @@
             <div class="tile">
                 <h3 class="tile-title">ส่วนที่ 6 ข้อมูลด้านการสื่อสารภายในครัวเรือน (ตอบได้มากกว่า 1 ข้อ)</h3>
                 <div class="tile-body">
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="form-group col-md-12">
                             <label>1. ช่องทางการสื่อสารของครัวเรือน(การสื่อสารของคนในครัวเรือนที่สื่อสารระหว่างคนในครอบครัวญาติพี่น้อง เพื่อนบ้าน และชุมชน)</label>
                             <div class="dropdown-check-list form-control" tabindex="100">
@@ -30,11 +30,29 @@
                                 <x-error-message title="HOUSEHOLD_COMUNICAT_OCCUP_ID" />
                             </div>
                         </div>
+                    </div> --}}
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label>1. ด้านอาชีพ/รายได้</label>
+                            <textarea name="HOUSEHOLD_COMUNICAT_OCCUP" class="form-control" rows="10" placeholder="ข้อเสนอแนะ">{{ $result->HOUSEHOLD_COMUNICAT_OCCUP }}</textarea>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label>2. ข้อเสนอแนะ</label>
-                            <textarea name="SUGGESTION" class="form-control" rows="10" placeholder="ข้อเสนอแนะ">{{ $result->SUGGESTION }}</textarea>
+                            <label>2. ด้านการศึกษา</label>
+                            <textarea name="HOUSEHOLD_COMUNICAT_STUDY" class="form-control" rows="10" placeholder="ข้อเสนอแนะ">{{ $result->HOUSEHOLD_COMUNICAT_STUDY }}</textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label>3. ด้านสังคม</label>
+                            <textarea name="HOUSEHOLD_COMUNICAT_SOCIETY" class="form-control" rows="10" placeholder="ข้อเสนอแนะ">{{ $result->HOUSEHOLD_COMUNICAT_SOCIETY }}</textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label>4. ด้านอื่นๆ</label>
+                            <textarea name="HOUSEHOLD_COMUNICAT_OTHER" class="form-control" rows="10" placeholder="ข้อเสนอแนะ">{{ $result->HOUSEHOLD_COMUNICAT_OTHER }}</textarea>
                         </div>
                     </div>
                 </div>

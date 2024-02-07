@@ -9,9 +9,10 @@ class HouseholdCommunicat extends Model
     protected $table = 'household_communicats';
 
     protected $fillable = [
-        'HOUSEHOLD_COMUNICAT_OCCUP_ID',
-        'HOUSEHOLD_COMUNICAT_OCCUP_ID_OTHER',
-        'SUGGESTION',
+        'HOUSEHOLD_COMUNICAT_OCCUP',
+        'HOUSEHOLD_COMUNICAT_STUDY',
+        'HOUSEHOLD_COMUNICAT_SOCIETY',
+        'HOUSEHOLD_COMUNICAT_OTHER',
         'household_info_id'
     ];
 
