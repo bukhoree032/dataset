@@ -20,8 +20,16 @@
                                     <ul class="items">
                                         @foreach(__jobs5_1() as $index => $value)
                                         <li>
-                                            <input type="checkbox" name="HOUSEHOLD_POLITICAL_COM_ELEC[{{ $index }}]" class="input-COM_ELEC_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_POLITICAL_COM_ELEC[$index]) && ($result->HOUSEHOLD_POLITICAL_COM_ELEC[$index] == $value['label'])) checked @endif/>
-                                            {{ $value['label'] }}
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <input type="checkbox" name="HOUSEHOLD_POLITICAL_COM_ELEC[{{ $index }}]" class="input-COM_ELEC_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_POLITICAL_COM_ELEC[$index]) && ($result->HOUSEHOLD_POLITICAL_COM_ELEC[$index] == $value['label'])) checked @endif/>
+                                                    {{ $value['label'] }}
+                                                </div>
+                                                <div class="col-md-3">
+                                                    {{-- <input type="checkbox" name="HOUSEHOLD_POLITICAL_COM_ELEC_NUM[{{ $index }}]" class="input-COM_ELEC_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_POLITICAL_COM_ELEC[$index]) && ($result->HOUSEHOLD_POLITICAL_COM_ELEC[$index] == $value['label'])) checked @endif/> --}}
+                                                    <input type="text" name="HOUSEHOLD_POLITICAL_COM_ELEC_NUM[{{ $index }}]" style="width: 100%" placeholder="จำนวนสามชิกที่เข้าร่วม" value="{{ $result->HOUSEHOLD_POLITICAL_COM_ELEC_NUM[$index] }}" />
+                                                </div>
+                                            </div>
                                         </li>
                                         @endforeach
                                         <li>
@@ -32,7 +40,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        {{-- <div class="col-md-6">
                             <p class="pb-0 mb-0">2. กรณีพิพาทของสมาชิกในครัวเรือน</p>
                             <div class="row">
                                 <div class="form-group col-md-6">
@@ -66,7 +74,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="tile-footer">

@@ -21,8 +21,6 @@
     
                 <td>{{ $key_COM_ELEC }}</td>
                 <td></td>
-                <td>{{ $value->HOUSEHOLD_POLITICAL_HH_CONFLICT }}</td>
-                <td>{{ $value->HOUSEHOLD_POLITICAL_CONFLICT_OTHER }}</td>
             </tr>
         @endforeach
     @endforeach

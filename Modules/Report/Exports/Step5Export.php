@@ -31,8 +31,8 @@ class Step5Export implements FromView, ShouldAutoSize, WithTitle, WithEvents
                 'stores.STORE_FORM_NUMBER',
                 'STORE_FORM_NUMBER',
                 'household_politicals.HOUSEHOLD_POLITICAL_COM_ELEC',
-                'household_politicals.HOUSEHOLD_POLITICAL_HH_CONFLICT',
-                'household_politicals.HOUSEHOLD_POLITICAL_CONFLICT_OTHER'
+                'household_politicals.HOUSEHOLD_POLITICAL_COM_ELEC_NUM',
+                'household_politicals.HOUSEHOLD_POLITICAL_COM_ELEC_OTHER',
             ])
             ->join('stores', 'stores.id', '=', 'household_infos.store_id')
             ->join('household_politicals', 'household_politicals.household_info_id', '=', 'household_infos.id')
@@ -40,6 +40,7 @@ class Step5Export implements FromView, ShouldAutoSize, WithTitle, WithEvents
 
         foreach ($data as $key => $value) {
             $data[$key]->HOUSEHOLD_POLITICAL_COM_ELEC = unserialize($data[$key]->HOUSEHOLD_POLITICAL_COM_ELEC);
+            $data[$key]->HOUSEHOLD_POLITICAL_COM_ELEC_NUM = unserialize($data[$key]->HOUSEHOLD_POLITICAL_COM_ELEC_NUM);
         }
         // dd($data);
         $this->count = count($data);

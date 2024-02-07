@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <div class="form-row">
                 <div class="col-md-12 mb-6">
-                    <label><b>1. สมาชิกในครัวเรือนของท่านมีส่วนร่วมในกิจกรรมของชุมชน</b></label>
+                    <label><b>1. สมาชิกในครัวเรือนของท่านมีส่วนร่วมในกิจกรรมของชุมชน</b></label> {{-- น่าสนใจ --}}
                     @php $row=0; @endphp
                     @foreach($result->householdInfo->householdPolitical->HOUSEHOLD_POLITICAL_COM_ELEC as $index => $value)
                         @php $row++; @endphp
@@ -15,7 +15,7 @@
                     @endforeach
                 </div>
             </div>
-            <div class="form-row">
+            {{-- <div class="form-row">
                 <div class="col-md-12 mb-12">
                     <label><b>2. กรณีพิพาทของสมาชิกในครัวเรือน</b></label>
                 </div>
@@ -27,7 +27,7 @@
                     <label><b>2.2 ความขัดแย้งกับบุคคลอื่น</b></label>
                     1.{{ $result->householdInfo->householdPolitical->HOUSEHOLD_POLITICAL_CONFLICT_OTHER }}
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </div>

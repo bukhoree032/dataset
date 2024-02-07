@@ -11,7 +11,7 @@
                 <h3 class="tile-title">ส่วนที่ 5 ข้อมูลด้านการเมืองการปกครอง (ตอบได้มากกว่า 1 ข้อ)</h3>
                 <div class="tile-body">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group col-md-12">
                                 <label>1. สมาชิกในครัวเรือนของท่านมีส่วนร่วมในกิจกรรมของชุมชน</label>
                                 <div class="dropdown-check-list form-control" tabindex="100">
@@ -19,8 +19,16 @@
                                     <ul class="items">
                                         @foreach(__jobs5_1() as $index => $value)
                                         <li>
-                                            <input type="checkbox" name="HOUSEHOLD_POLITICAL_COM_ELEC[{{ $index }}]" class="input-COM_ELEC_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(old("HOUSEHOLD_POLITICAL_COM_ELEC.$index")) checked @endif />
-                                            {{ $value['label'] }}
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <input type="checkbox" name="HOUSEHOLD_POLITICAL_COM_ELEC[{{ $index }}]" class="input-COM_ELEC_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(old("HOUSEHOLD_POLITICAL_COM_ELEC.$index")) checked @endif />
+                                                    {{ $value['label'] }}
+                                                </div>
+                                                <div class="col-md-3">
+                                                    {{-- <input type="checkbox" name="HOUSEHOLD_POLITICAL_COM_ELEC_NUM[{{ $index }}]" class="input-COM_ELEC_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_POLITICAL_COM_ELEC[$index]) && ($result->HOUSEHOLD_POLITICAL_COM_ELEC[$index] == $value['label'])) checked @endif/> --}}
+                                                    <input type="text" name="HOUSEHOLD_POLITICAL_COM_ELEC_NUM[{{ $index }}]" style="width: 100%" placeholder="จำนวนสามชิกที่เข้าร่วม" value="{{ old("HOUSEHOLD_POLITICAL_COM_ELEC_NUM.$index") }}" />
+                                                </div>
+                                            </div>
                                         </li>
                                         @endforeach
                                         <li>
@@ -31,7 +39,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        {{-- <div class="col-md-6">
                             <p class="pb-0 mb-0">2. กรณีพิพาทของสมาชิกในครัวเรือน</p>
                             <div class="row">
                                 <div class="form-group col-md-6">
@@ -65,7 +73,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="tile-footer">

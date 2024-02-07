@@ -18,8 +18,6 @@ class CreateHouseholdPoliticalsTable extends Migration
             $table->string('HOUSEHOLD_POLITICAL_COM_ELEC')->nullable();
             $table->string('HOUSEHOLD_POLITICAL_COM_ELEC_NUM')->nullable();
             $table->string('HOUSEHOLD_POLITICAL_COM_ELEC_OTHER')->nullable();
-            $table->string('HOUSEHOLD_POLITICAL_HH_CONFLICT')->nullable();
-            $table->string('HOUSEHOLD_POLITICAL_CONFLICT_OTHER')->nullable();
 
             $table->unsignedBigInteger('household_info_id');
             $table->foreign('household_info_id', 'fk_household_infos_household_politicals')

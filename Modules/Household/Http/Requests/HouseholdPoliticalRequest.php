@@ -15,8 +15,8 @@ class HouseholdPoliticalRequest extends FormRequest
     {
         return [
             'HOUSEHOLD_POLITICAL_COM_ELEC' => ['required'],
-            'HOUSEHOLD_POLITICAL_HH_CONFLICT' => ['required'],
-            'HOUSEHOLD_POLITICAL_CONFLICT_OTHER' => ['required'],
+            // 'HOUSEHOLD_POLITICAL_HH_CONFLICT' => ['required'],
+            // 'HOUSEHOLD_POLITICAL_CONFLICT_OTHER' => ['required'],
         ];
     }
 
@@ -29,8 +29,8 @@ class HouseholdPoliticalRequest extends FormRequest
     {
         return [
             'HOUSEHOLD_POLITICAL_COM_ELEC.required' => 'โปรดเลือกอย่างน้อย 1 ตัวเลือก',
-            'HOUSEHOLD_POLITICAL_HH_CONFLICT.required' => 'โปรดเลือกอย่างน้อย 1 ตัวเลือก',
-            'HOUSEHOLD_POLITICAL_CONFLICT_OTHER.required' => 'โปรดเลือกอย่างน้อย 1 ตัวเลือก',
+            // 'HOUSEHOLD_POLITICAL_HH_CONFLICT.required' => 'โปรดเลือกอย่างน้อย 1 ตัวเลือก',
+            // 'HOUSEHOLD_POLITICAL_CONFLICT_OTHER.required' => 'โปรดเลือกอย่างน้อย 1 ตัวเลือก',
         ];
     }
 

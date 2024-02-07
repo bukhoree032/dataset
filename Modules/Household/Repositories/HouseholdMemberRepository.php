@@ -31,7 +31,7 @@ class HouseholdMemberRepository extends BaseRepository
     public function get($id)
     {
         $result =  $this->classModelName::findOrFail($id);
-        // $result->HOUSEHOLD_POLITICAL_COM_ELEC = unserialize($result->HOUSEHOLD_POLITICAL_COM_ELEC);
+        $result->HOUSEHOLD_POLITICAL_COM_ELEC = unserialize($result->HOUSEHOLD_POLITICAL_COM_ELEC);
         // dd($result);
         return $result;
     }

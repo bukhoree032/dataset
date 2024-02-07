@@ -12,8 +12,6 @@ class HouseholdPolitical extends Model
         'HOUSEHOLD_POLITICAL_COM_ELEC',
         'HOUSEHOLD_POLITICAL_COM_ELEC_NUM',
         'HOUSEHOLD_POLITICAL_COM_ELEC_OTHER',
-        'HOUSEHOLD_POLITICAL_HH_CONFLICT',
-        'HOUSEHOLD_POLITICAL_CONFLICT_OTHER',
         'household_info_id',
     ];
 
