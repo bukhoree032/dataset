@@ -29,11 +29,32 @@ class Step31Export implements FromView, ShouldAutoSize, WithTitle, WithEvents
         $data = \DB::table('household_infos')
             ->select([
                 'stores.STORE_FORM_NUMBER',
-                'household_econs.HOUSEHOLD_ECON_INCOME_TYPE',
-                'household_econs.HOUSEHOLD_ECON_INCOME',
-                'household_econs.HOUSEHOLD_ECON_INCOME_DATEDIFF',
-                'household_econs.HOUSEHOLD_ECON_EXP_SUM',
-                'household_econs.HOUSEHOLD_ECON_EXP',
+                'household_econs.HOUSEHOLD_ECON_GENERAL',
+                'household_econs.HOUSEHOLD_ECON_AGRI',
+                'household_econs.HOUSEHOLD_ECON_LIVESTOCK',
+                'household_econs.HOUSEHOLD_ECON_FISHING',
+                'household_econs.HOUSEHOLD_ECON_OCCU_OTHER',
+                'household_econs.HOUSEHOLD_ECON_CHILD',
+                'household_econs.HOUSEHOLD_ECON_WELFARE',
+                'household_econs.HOUSEHOLD_ECON_OTHER_REVENUE',
+                'household_econs.HOUSEHOLD_ECON_NOTE_REVENUE',
+                
+                'household_econs.HOUSEHOLD_ECON_FOOD',
+                'household_econs.HOUSEHOLD_ECON_WATER',
+                'household_econs.HOUSEHOLD_ECON_ELECTRICITY',
+                'household_econs.HOUSEHOLD_ECON_TEL',
+                'household_econs.HOUSEHOLD_ECON_INTERNET',
+                'household_econs.HOUSEHOLD_ECON_STUDY',
+                'household_econs.HOUSEHOLD_ECON_NURSE',
+                'household_econs.HOUSEHOLD_ECON_INSURANCE',
+                'household_econs.HOUSEHOLD_ECON_SOCIETY',
+                'household_econs.HOUSEHOLD_ECON_TRAVEL',
+                'household_econs.HOUSEHOLD_ECON_RISK',
+                'household_econs.HOUSEHOLD_ECON_ALCOHOL',
+                'household_econs.HOUSEHOLD_ECON_DEBT',
+                'household_econs.HOUSEHOLD_ECON_OTHER_EXPENSES',
+                'household_econs.HOUSEHOLD_ECON_NOTE_EXPENSES',
+
                 'household_econs.created_at'
             ])
             ->join('stores', 'stores.id', '=', 'household_infos.store_id')
@@ -48,20 +69,15 @@ class Step31Export implements FromView, ShouldAutoSize, WithTitle, WithEvents
         }
 
         foreach ($data as $key => $value) {
-            $data[$key]->HOUSEHOLD_ECON_INCOME_TYPE = unserialize($data[$key]->HOUSEHOLD_ECON_INCOME_TYPE);
-            $data[$key]->HOUSEHOLD_ECON_INCOME = unserialize($data[$key]->HOUSEHOLD_ECON_INCOME);
-            $data[$key]->HOUSEHOLD_ECON_INCOME_DATEDIFF = unserialize($data[$key]->HOUSEHOLD_ECON_INCOME_DATEDIFF);
-            $data[$key]->HOUSEHOLD_ECON_EXP_SUM = unserialize($data[$key]->HOUSEHOLD_ECON_EXP_SUM);
-            $data[$key]->HOUSEHOLD_ECON_EXP = unserialize($data[$key]->HOUSEHOLD_ECON_EXP);
             $data[$key]->created_at = date("Y", strtotime($data[$key]->created_at)) + 543;
 
-            foreach ($data[$key]->HOUSEHOLD_ECON_INCOME_TYPE as $key_TYPE => $value_type) {
-                $data[$key]->HOUSEHOLD_ECON_INCOME_TYPE[$key_TYPE] = extract_int($value_type);
-            }
+            // foreach ($data[$key]->HOUSEHOLD_ECON_INCOME_TYPE as $key_TYPE => $value_type) {
+            //     $data[$key]->HOUSEHOLD_ECON_INCOME_TYPE[$key_TYPE] = extract_int($value_type);
+            // }
 
-            foreach ($data[$key]->HOUSEHOLD_ECON_EXP_SUM as $key_TYPE => $value_type) {
-                $data[$key]->HOUSEHOLD_ECON_EXP_SUM[$key_TYPE] = extract_int($value_type);
-            }
+            // foreach ($data[$key]->HOUSEHOLD_ECON_EXP_SUM as $key_TYPE => $value_type) {
+            //     $data[$key]->HOUSEHOLD_ECON_EXP_SUM[$key_TYPE] = extract_int($value_type);
+            // }
         }
 
         // dd($data);
