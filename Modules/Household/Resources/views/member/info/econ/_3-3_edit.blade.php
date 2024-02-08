@@ -13,7 +13,7 @@
             <ul class="items">
                 @foreach(__jobs_3_3_1() as $index => $value)
                 <li style="margin-top: 5px;">
-                    <input type="checkbox" name="HOUSEHOLD_ECON_DEPT_FROM_TYPE[{{ $index }}]" class="input-DEPT_FROM_TYPE" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_DEPT_FROM_TYPE[$index]) && ($result->HOUSEHOLD_ECON_DEPT_FROM_TYPE[$index] == $value['id'])) checked @endif/>
+                    <input type="checkbox" name="HOUSEHOLD_ECON_DEPT_FROM_TYPE[{{ $index }}]" class="input-DEPT_FROM_TYPE" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_DEPT_FROM_TYPE[$index]) && ($result->HOUSEHOLD_ECON_DEPT_FROM_TYPE[$index] == $value['label'])) checked @endif/>
                     {{ $value['label'] }}
                     @if ($value['id']==12)
                     <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_DEPT_FROM_TYPE_OTHER[{{ $index }}]">{{ $result->HOUSEHOLD_ECON_DEPT_FROM_TYPE_OTHER[$index] }}</textarea>
@@ -36,7 +36,7 @@
             <ul class="items">
                 @foreach(__jobs_3_3_2_1() as $index => $value)
                 <li style="margin-top: 5px;">
-                    <input type="checkbox" name="HOUSEHOLD_ECON_SPECIAL_FIN_[{{ $index }}]" class="input-SPECIAL_FIN_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_SPECIAL_FIN_[$index]) && ($result->HOUSEHOLD_ECON_SPECIAL_FIN_[$index] == $value['id'])) checked @endif/>
+                    <input type="checkbox" name="HOUSEHOLD_ECON_SPECIAL_FIN_[{{ $index }}]" class="input-SPECIAL_FIN_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_SPECIAL_FIN_[$index]) && ($result->HOUSEHOLD_ECON_SPECIAL_FIN_[$index] == $value['label'])) checked @endif/>
                     {{ $value['label'] }}
                 </li>
                 @endforeach
@@ -51,7 +51,7 @@
             <ul class="items">
                 @foreach(__jobs_3_3_2_2() as $index => $value)
                 <li style="margin-top: 5px;">
-                    <input type="checkbox" name="HOUSEHOLD_ECON_COMM_BANK_[{{ $index }}]" class="input-COMM_BANK_" data-label="{{ $value['label'] }} " value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_COMM_BANK_[$index]) && ($result->HOUSEHOLD_ECON_COMM_BANK_[$index] == $value['id'])) checked @endif/>
+                    <input type="checkbox" name="HOUSEHOLD_ECON_COMM_BANK_[{{ $index }}]" class="input-COMM_BANK_" data-label="{{ $value['label'] }} " value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_COMM_BANK_[$index]) && ($result->HOUSEHOLD_ECON_COMM_BANK_[$index] == $value['label'])) checked @endif/>
                     {{ $value['label'] }}
                 </li>
                 @if ($value['id']==8)
@@ -71,7 +71,7 @@
             <ul class="items">
                 @foreach(__jobs_3_3_2_3() as $index => $value)
                 <li style="margin-top: 5px;">
-                    <input type="checkbox" name="HOUSEHOLD_ECON_NONBANK_[{{ $index }}]" class="input-NONBANK_" data-label="{{ $value['label'] }} " value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_NONBANK_[$index]) && ($result->HOUSEHOLD_ECON_NONBANK_[$index] == $value['id'])) checked @endif/>
+                    <input type="checkbox" name="HOUSEHOLD_ECON_NONBANK_[{{ $index }}]" class="input-NONBANK_" data-label="{{ $value['label'] }} " value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_NONBANK_[$index]) && ($result->HOUSEHOLD_ECON_NONBANK_[$index] == $value['label'])) checked @endif/>
                     {{ $value['label'] }}
                     @if ($value['id']==1)
                     <input type="text" name="HOUSEHOLD_ECON_NONBANK_OTHER[{{ $index }}]" placeholder="ระบุ กรณีตัวเลือกข้อ 1" value="{{ $result->HOUSEHOLD_ECON_NONBANK_OTHER[$index] }}" />
@@ -96,7 +96,7 @@
             <ul class="items">
                 @foreach(__jobs_3_3_2_4() as $index => $value)
                 <li style="margin-top: 5px;">
-                    <input type="checkbox" name="HOUSEHOLD_ECON_COMMU_FUND_[{{ $index }}]" class="input-COMMU_FUND_" data-label="{{ $index }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_COMMU_FUND_[$index]) && ($result->HOUSEHOLD_ECON_COMMU_FUND_[$index] == $value['id'])) checked @endif/>
+                    <input type="checkbox" name="HOUSEHOLD_ECON_COMMU_FUND_[{{ $index }}]" class="input-COMMU_FUND_" data-label="{{ $index }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_COMMU_FUND_[$index]) && ($result->HOUSEHOLD_ECON_COMMU_FUND_[$index] == $value['label'])) checked @endif/>
                     {{ $value['label'] }}
                 </li>
                 @if ($value['id']==10)
@@ -117,7 +117,7 @@
             <ul class="items">
                 @foreach(__jobs_3_3_2_5() as $index => $value)
                 <li style="margin-top: 5px;">
-                    <input type="checkbox" name="HOUSEHOLD_ECON_SHARK_LOAN_[{{ $index }}]" class="input-SHARK_LOAN_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_SHARK_LOAN_[$index]) && ($result->HOUSEHOLD_ECON_SHARK_LOAN_[$index] == $value['id'])) checked @endif/>
+                    <input type="checkbox" name="HOUSEHOLD_ECON_SHARK_LOAN_[{{ $index }}]" class="input-SHARK_LOAN_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_SHARK_LOAN_[$index]) && ($result->HOUSEHOLD_ECON_SHARK_LOAN_[$index] == $value['label'])) checked @endif/>
                     {{ $value['label'] }}
                 </li>
                 @endforeach
@@ -135,7 +135,7 @@
             <ul class="items">
                 @foreach(__jobs_3_3_3() as $index => $value)
                 <li style="margin-top: 5px;">
-                    <input type="checkbox" name="HOUSEHOLD_ECON_H_SAVING_[{{ $index }}]" class="input-H_SAVING_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_H_SAVING_[$index]) && ($result->HOUSEHOLD_ECON_H_SAVING_[$index] == $value['id'])) checked @endif/>
+                    <input type="checkbox" name="HOUSEHOLD_ECON_H_SAVING_[{{ $index }}]" class="input-H_SAVING_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_H_SAVING_[$index]) && ($result->HOUSEHOLD_ECON_H_SAVING_[$index] == $value['label'])) checked @endif/>
                     {{ $value['label'] }}
                     @if ($value['id']==6)
                     <input type="text" name="HOUSEHOLD_ECON_H_SAVING_OTHER[{{ $index }}]" placeholder="ระบุ กรณีตัวเลือกข้อ 6" value="{{ $result->HOUSEHOLD_ECON_H_SAVING_OTHER[$index] }}" />
@@ -163,7 +163,7 @@
             <ul class="items">
                 @foreach(__jobs_3_3_4_1() as $index => $value)
                 <li style="margin-top: 5px;">
-                    <input type="checkbox" name="HOUSEHOLD_ECON_OCCUP_PROBLEM_[{{ $index }}]" class="input-OCCUP_PROBLEM_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_OCCUP_PROBLEM_[$index]) && ($result->HOUSEHOLD_ECON_OCCUP_PROBLEM_[$index] == $value['id'])) checked @endif/>
+                    <input type="checkbox" name="HOUSEHOLD_ECON_OCCUP_PROBLEM_[{{ $index }}]" class="input-OCCUP_PROBLEM_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_OCCUP_PROBLEM_[$index]) && ($result->HOUSEHOLD_ECON_OCCUP_PROBLEM_[$index] == $value['label'])) checked @endif/>
                     {{ $value['label'] }}
                 </li>
                 @if ($value['id']==7)
@@ -182,7 +182,7 @@
             <ul class="items">
                 @foreach(__jobs_3_3_4_2() as $index => $value)
                 <li style="margin-top: 5px;">
-                    <input type="checkbox" name="HOUSEHOLD_ECON_LIVING_PROBLEM_[{{ $index }}]" class="input-LIVING_PROBLEM_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_LIVING_PROBLEM_[$index]) && ($result->HOUSEHOLD_ECON_LIVING_PROBLEM_[$index] == $value['id'])) checked @endif/>
+                    <input type="checkbox" name="HOUSEHOLD_ECON_LIVING_PROBLEM_[{{ $index }}]" class="input-LIVING_PROBLEM_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_LIVING_PROBLEM_[$index]) && ($result->HOUSEHOLD_ECON_LIVING_PROBLEM_[$index] == $value['label'])) checked @endif/>
                     {{ $value['label'] }}
                 </li>
                 @if ($value['id']==5)

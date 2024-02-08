@@ -98,7 +98,7 @@
                 <li style="margin-top: 5px;">
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="checkbox" name="HOUSEHOLD_ECON_EQUIPMENT_TYPE[{{ $index }}]" class="input-EQUIPMENT_TYPE" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_EQUIPMENT_TYPE[$index]) && ($result->HOUSEHOLD_ECON_EQUIPMENT_TYPE[$index] == $value['id'])) checked @endif/>
+                            <input type="checkbox" name="HOUSEHOLD_ECON_EQUIPMENT_TYPE[{{ $index }}]" class="input-EQUIPMENT_TYPE" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_EQUIPMENT_TYPE[$index]) && ($result->HOUSEHOLD_ECON_EQUIPMENT_TYPE[$index] == $value['id'] || $result->HOUSEHOLD_ECON_EQUIPMENT_TYPE[$index] == $value['label'])) checked @endif/>
                             {{ $value['label'] }}
                         </div>
                         <div class="col-md-6">
@@ -122,7 +122,7 @@
                 <li style="margin-top: 5px;">
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="checkbox" name="HOUSEHOLD_ECON_VEHICLE_TYPE[{{ $index }}]" class="input-VEHICLE_TYPE" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_VEHICLE_TYPE[$index]) && ($result->HOUSEHOLD_ECON_VEHICLE_TYPE[$index] == $value['id'])) checked @endif/>
+                            <input type="checkbox" name="HOUSEHOLD_ECON_VEHICLE_TYPE[{{ $index }}]" class="input-VEHICLE_TYPE" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_VEHICLE_TYPE[$index]) && ($result->HOUSEHOLD_ECON_VEHICLE_TYPE[$index] == $value['id'] || $result->HOUSEHOLD_ECON_VEHICLE_TYPE[$index] == $value['label'])) checked @endif/>
                             {{ $value['label'] }}
                         </div>
                         <div class="col-md-6">
@@ -146,7 +146,7 @@
                 <li style="margin-top: 5px;">
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="checkbox" name="HOUSEHOLD_ECON_COM_DEVICE_TYPE[{{ $index }}]" class="input-COM_DEVICE_TYPE" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_COM_DEVICE_TYPE[$index]) && ($result->HOUSEHOLD_ECON_COM_DEVICE_TYPE[$index] == $value['id'])) checked @endif/>
+                            <input type="checkbox" name="HOUSEHOLD_ECON_COM_DEVICE_TYPE[{{ $index }}]" class="input-COM_DEVICE_TYPE" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_COM_DEVICE_TYPE[$index]) && ($result->HOUSEHOLD_ECON_COM_DEVICE_TYPE[$index] == $value['id'] || $result->HOUSEHOLD_ECON_COM_DEVICE_TYPE[$index] == $value['label'])) checked @endif/>
                             {{ $value['label'] }}
                         </div>
                         <div class="col-md-6">
@@ -171,7 +171,7 @@
                 <li style="margin-top: 5px;">
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="checkbox" name="HOUSEHOLD_ECON_PET_CATEG[{{ $index }}]" class="input-PET_CATEG" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_PET_CATEG[$index]) && ($result->HOUSEHOLD_ECON_PET_CATEG[$index] == $value['id'])) checked @endif/>
+                            <input type="checkbox" name="HOUSEHOLD_ECON_PET_CATEG[{{ $index }}]" class="input-PET_CATEG" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(isset($result->HOUSEHOLD_ECON_PET_CATEG[$index]) && ($result->HOUSEHOLD_ECON_PET_CATEG[$index] == $value['id'] || $result->HOUSEHOLD_ECON_PET_CATEG[$index] == $value['label'])) checked @endif/>
                             {{ $value['label'] }}
                         </div>
                         <div class="col-md-6">
