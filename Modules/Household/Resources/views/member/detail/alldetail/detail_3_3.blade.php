@@ -8,7 +8,7 @@
         <label><b>1.2 สาเหตุของหนี้สิน ( ภาษาราชการ/ประจำชาติ ) </b></label>
         @php $row=0; @endphp
         @foreach(__jobs_3_3_1() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_DEPT_FROM_TYPE[$index]) && ($resultEcon->HOUSEHOLD_ECON_DEPT_FROM_TYPE[$index] == $value['id']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_DEPT_FROM_TYPE[1]) && ($resultEcon->HOUSEHOLD_ECON_DEPT_FROM_TYPE[1] == $value['label']))
                 @php $row++; @endphp
                 @if($value['label'] != "12.อื่นๆ (ระบุ)")
                     {{ $row.".".$value['label'] }}<br>
@@ -25,7 +25,7 @@
         <label><b>2.1 สถาบันเงินเฉพาะกิจ</b> </label>
         @php $row=0; @endphp
         @foreach(__jobs_3_3_2_1() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_SPECIAL_FIN_[$index]) && ($resultEcon->HOUSEHOLD_ECON_SPECIAL_FIN_[$index] == $value['id']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_SPECIAL_FIN_[$index]) && ($resultEcon->HOUSEHOLD_ECON_SPECIAL_FIN_[$index] == $value['label']))
                 @php $row++; @endphp
                 {{ $row.".".$value['label'] }}
             @endif
@@ -35,7 +35,7 @@
         <label><b>2.2 ธนาคารพาณิชย์</b></label>
         @php $row=0; @endphp
         @foreach(__jobs_3_3_2_2() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_COMM_BANK_[$index]) && ($resultEcon->HOUSEHOLD_ECON_COMM_BANK_[$index] == $value['id']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_COMM_BANK_[$index]) && ($resultEcon->HOUSEHOLD_ECON_COMM_BANK_[$index] == $value['label']))
                 @php $row++; @endphp
                 @if($value['label'] != "8.อื่นๆ (ระบุ)…..")
                     {{ $row.".".$value['label'] }}<br>
@@ -49,7 +49,7 @@
         <label><b>2.3 สถาบันการเงินที่ไม่ใช่ธนาคาร</b></label>
         @php $row=0; @endphp
         @foreach(__jobs_3_3_2_3() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_NONBANK_[$index]) && ($resultEcon->HOUSEHOLD_ECON_NONBANK_[$index] == $value['id']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_NONBANK_[$index]) && ($resultEcon->HOUSEHOLD_ECON_NONBANK_[$index] == $value['label']))
                 @php $row++; @endphp
                 @if($value['label'] != "8.อื่นๆ (ระบุ)…..")
                     {{ $row.".".$value['label'] }}<br>
@@ -65,7 +65,7 @@
         <label><b>2.4 กองทุนของหมู่บ้าน/ชุมชน</b> </label> 
         @php $row=0; @endphp
         @foreach(__jobs_3_3_2_4() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_COMMU_FUND_[$index]) && ($resultEcon->HOUSEHOLD_ECON_COMMU_FUND_[$index] == $value['id']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_COMMU_FUND_[$index]) && ($resultEcon->HOUSEHOLD_ECON_COMMU_FUND_[$index] == $value['label']))
                 @php $row++; @endphp
                 @if($value['label'] != "8.อื่นๆ (ระบุ)…..")
                     {{ $row.".".$value['label'] }}<br>
@@ -78,7 +78,7 @@
         <label><b>2.5 เงินกู้นอกระบบ</b> </label> 
         @php $row=0; @endphp
         @foreach(__jobs_3_3_2_5() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_SHARK_LOAN_[$index]) && ($resultEcon->HOUSEHOLD_ECON_SHARK_LOAN_[$index] == $value['id']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_SHARK_LOAN_[$index]) && ($resultEcon->HOUSEHOLD_ECON_SHARK_LOAN_[$index] == $value['label']))
                 @php $row++; @endphp
                     {{ $row.".".$value['label'] }}<br>
             @endif
@@ -90,7 +90,7 @@
         <label><b>3. การออมของครัวเรือน</b> </label>
         @php $row=0; @endphp
         @foreach(__jobs_3_3_3() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_H_SAVING_[$index]) && ($resultEcon->HOUSEHOLD_ECON_H_SAVING_[$index] == $value['id']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_H_SAVING_[$index]) && ($resultEcon->HOUSEHOLD_ECON_H_SAVING_[$index] == $value['label']))
                 @php $row++; @endphp
                 @if($value['label'] == "6.สหกรณ์ (ระบุ)........")
                     {{ $row.".".$value['label'] }} ( {{ $resultEcon->HOUSEHOLD_ECON_H_SAVING_OTHER[$index] }} )<br>
@@ -109,7 +109,7 @@
         <label><b>4.1 ปัญหาด้านเศรษฐกิจในครัวเรือน </b></label>
         @php $row=0; @endphp
         @foreach(__jobs_3_3_4_1() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_OCCUP_PROBLEM_[$index]) && ($resultEcon->HOUSEHOLD_ECON_OCCUP_PROBLEM_[$index] == $value['id']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_OCCUP_PROBLEM_[$index]) && ($resultEcon->HOUSEHOLD_ECON_OCCUP_PROBLEM_[$index] == $value['label']))
                 @php $row++; @endphp
                 @if($value['label'] != "7.อื่นๆ (ระบุ)........")
                     {{ $row.".".$value['label'] }}<br>
@@ -122,7 +122,7 @@
         <label><b>4.2 ปัญหาด้านเศรษฐกิจในครัวเรือน </b></label>
         @php $row=0; @endphp
         @foreach(__jobs_3_3_4_2() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_LIVING_PROBLEM_[$index]) && ($resultEcon->HOUSEHOLD_ECON_LIVING_PROBLEM_[$index] == $value['id']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_LIVING_PROBLEM_[$index]) && ($resultEcon->HOUSEHOLD_ECON_LIVING_PROBLEM_[$index] == $value['label']))
                 @php $row++; @endphp
                 @if($value['label'] != "5.อื่นๆ(ระบุ)")
                     {{ $row.".".$value['label'] }}<br>

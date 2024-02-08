@@ -13,7 +13,7 @@
         <label><b>2. ที่ดินทำกิน</b></label>
         @php $row=0; @endphp
         @foreach(__jobs_3_2_2() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_LAND[$index]) && ($resultEcon->HOUSEHOLD_ECON_LAND[$index] == $value['id'] || $resultEcon->HOUSEHOLD_ECON_HOUSE_LIST[$index] == $value['label']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_LAND[$index]) && ($resultEcon->HOUSEHOLD_ECON_LAND[$index] == $value['id'] || $resultEcon->HOUSEHOLD_ECON_LAND[$index] == $value['label']))
                 @php $row++; @endphp
                 {{ $row.".".$value['label'] }} ( {{ $resultEcon->HOUSEHOLD_ECON_LAND_SIZE[$index] }} )<br>
             @endif
@@ -47,7 +47,7 @@
         <label><b>4. เครื่องมือ/เครื่องจักรในการประกอบอาชีพ </b></label>
         @php $row=0; @endphp
         @foreach(__jobs_3_2_4() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_EQUIPMENT_TYPE[$index]) && ($resultEcon->HOUSEHOLD_ECON_EQUIPMENT_TYPE[$index] == $value['id'] || $resultEcon->HOUSEHOLD_ECON_HOUSE_LIST[$index] == $value['label']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_EQUIPMENT_TYPE[$index]) && ($resultEcon->HOUSEHOLD_ECON_EQUIPMENT_TYPE[$index] == $value['id'] || $resultEcon->HOUSEHOLD_ECON_EQUIPMENT_TYPE[$index] == $value['label']))
                 @php $row++; @endphp
                 {{ $row.".".$value['label'] }} ( {{ $resultEcon->HOUSEHOLD_ECON_EQUIPMENT_NUM[$index] }} )<br>
             @endif
@@ -57,7 +57,7 @@
         <label><b>5. ยานพาหนะ</b></label>
         @php $row=0; @endphp
         @foreach(__jobs_3_2_5() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_VEHICLE_TYPE[$index]) && ($resultEcon->HOUSEHOLD_ECON_VEHICLE_TYPE[$index] == $value['id'] || $resultEcon->HOUSEHOLD_ECON_HOUSE_LIST[$index] == $value['label']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_VEHICLE_TYPE[$index]) && ($resultEcon->HOUSEHOLD_ECON_VEHICLE_TYPE[$index] == $value['id'] || $resultEcon->HOUSEHOLD_ECON_VEHICLE_TYPE[$index] == $value['label']))
                 @php $row++; @endphp
                 {{ $row.".".$value['label'] }} ( {{ $resultEcon->HOUSEHOLD_ECON_VEHICLE_NUM[$index] }} )<br>
             @endif
@@ -67,7 +67,7 @@
         <label><b>6. อุปกรณ์สื่อสาร</b></label>
         @php $row=0; @endphp
         @foreach(__jobs_3_2_6() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_COM_DEVICE_TYPE[$index]) && ($resultEcon->HOUSEHOLD_ECON_COM_DEVICE_TYPE[$index] == $value['id'] || $resultEcon->HOUSEHOLD_ECON_HOUSE_LIST[$index] == $value['label']))
+            @if(isset($resultEcon->HOUSEHOLD_ECON_COM_DEVICE_TYPE[$index]) && ($resultEcon->HOUSEHOLD_ECON_COM_DEVICE_TYPE[$index] == $value['id'] || $resultEcon->HOUSEHOLD_ECON_COM_DEVICE_TYPE[$index] == $value['label']))
                 @php $row++; @endphp
                 {{ $row.".".$value['label'] }} ( {{ $resultEcon->HOUSEHOLD_ECON_COM_DEVICE_NUM[$index] }} )<br>
             @endif
@@ -78,8 +78,8 @@
     <div class="col-md-4 mb-3">
         <label><b>7. สัตว์เลี้ยง </b></label>
         @php $row=0; @endphp
-        @foreach(__jobs_3_2_6() as $index => $value)
-            @if(isset($resultEcon->HOUSEHOLD_ECON_PET_CATEG[$index]) && ($resultEcon->HOUSEHOLD_ECON_PET_CATEG[$index] == $value['id'] || $resultEcon->HOUSEHOLD_ECON_HOUSE_LIST[$index] == $value['label']))
+        @foreach(__jobs_3_2_7() as $index => $value)
+            @if(isset($resultEcon->HOUSEHOLD_ECON_PET_CATEG[$index]) && ($resultEcon->HOUSEHOLD_ECON_PET_CATEG[$index] == $value['id'] || $resultEcon->HOUSEHOLD_ECON_PET_CATEG[$index] == $value['label']))
                 @php $row++; @endphp
                 {{ $row.".".$value['label'] }} ( {{ $resultEcon->HOUSEHOLD_ECON_PET_NUM[$index] }} )<br>
             @endif

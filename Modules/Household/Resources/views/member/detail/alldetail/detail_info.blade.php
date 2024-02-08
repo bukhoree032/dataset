@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <div class="form-row">
                 <div class="col-md-4 mb-3">
-                    <label><b>เก็บข้อมูล :</b> ครั้งที่ {{ $value->STORE_FORM_ROUND }} </label>
+                    <label><b>เก็บข้อมูล :</b> ครั้งที่ {{ $result->STORE_FORM_ROUND }} </label>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label><b>หมายเลขแบบสอบถาม :</b> {{ $result->STORE_FORM_NUMBER }} </label>
@@ -12,10 +12,10 @@
                     <label><b>วันที่สอบถาม :</b> {{ $result->STORE_DATE }} </label>
                 </div>
                 <!-- <div class="col-md-3 mb-3">
-                    <label><b>เวลา :</b> {{ $result->STORE_TIME }} </label>
+                    <label><b>เวลา :</b>  $result->STORE_TIME  </label>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label><b>ถึง :</b> {{ $result->STORE_TO_TIME }} </label>
+                    <label><b>ถึง :</b>  $result->STORE_TO_TIME  </label>
                 </div> -->
             </div>
             <div class="form-row">

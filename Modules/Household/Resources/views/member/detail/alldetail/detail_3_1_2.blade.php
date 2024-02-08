@@ -1,184 +1,68 @@
 <div class="form-row">
-    <div class="col-md-12 mb-2">
-        <label><b>1. ค่าใช้จ่ายประกอบอาชีพ ได้แก่ ค่าใช้จ่ายประกอบอาชีพ, ซื้อสินทรัพย์ถาวร เป็นต้น</b></label>
+    <div class="col-md-4 mb-3">
+        <label><b>อาหาร</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_FOOD }}<br>
     </div>
-    <div class="col-md-6 mb-2">
-        <div class="tile-body">
-            <table class="table table-hover table-sm">
-                <thead>
-                    <tr>
-                        <th class="text-nowrap text-center">ต่อเดือน</th>
-                        <th class="text-nowrap text-center">ต่อปี</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[1]/12) }}</td>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[1]) }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="col-md-4 mb-3">
+        <label><b>ค่าน้ำ</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_WATER }}<br>
     </div>
-</div>
-<div class="form-row">
-    <div class="col-md-12 mb-2">
-        <label><b>2. ค่าอาหาร ได้แก่ อาหารสด/แห้ง, อาหารสำเร็จจากร้านค้า, น้ำดื่ม/นม/ น้ำอัดลม/ กาแฟ, ขนมขบเคี้ยว, ค่าขนมลูกไปโรงเรียน, เครื่องดื่มชูกำลัง/ เหล้า/เบียร์, เชื้อเพลิงหุงต้ม เป็นต้น</b></label>
+    <div class="col-md-4 mb-3">
+        <label><b>ค่าไฟ</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_ELECTRICITY }}<br>
     </div>
-    <div class="col-md-6 mb-2">
-        <div class="tile-body">
-            <table class="table table-hover table-sm">
-                <thead>
-                    <tr>
-                        <th class="text-nowrap text-center">ต่อเดือน</th>
-                        <th class="text-nowrap text-center">ต่อปี</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[2]/12) }}</td>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[2]) }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    
+    <div class="col-md-4 mb-3">
+        <label><b>ค่าโทรศัพท์</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_TEL }}<br>
     </div>
-</div>
-<div class="form-row">
-    <div class="col-md-12 mb-2">
-        <label><b>3. ค่าเสื้อผ้า/เครื่องแต่งกาย ได้แก่ เสื้อผ้า เครื่องแต่งกาย, ค่าใช้จ่ายเสริมสวย, ซื้อทองเครื่องประดับ เป็นต้น</b></label>
+    <div class="col-md-4 mb-3">
+        <label><b>ค่าอินเตอร์เน็ต</b></b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_INTERNET }}<br>
     </div>
-    <div class="col-md-6 mb-2">
-        <div class="tile-body">
-            <table class="table table-hover table-sm">
-                <thead>
-                    <tr>
-                        <th class="text-nowrap text-center">ต่อเดือน</th>
-                        <th class="text-nowrap text-center">ต่อปี</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[3]/12) }}</td>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[3]) }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="col-md-4 mb-3">
+        <label><b>การศึกษา</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_STUDY }}<br>
     </div>
-</div>
-<div class="form-row">
-    <div class="col-md-12 mb-2">
-        <label><b>4. ค่ายา-สุขภาพอนามัย ได้แก่ ยารักษาโรค, ค่ารักษาพยาบาล, ยาสูบ บุหรี่, เบี้ยประกันชีวิต เป็นต้น</b></label>
+    
+    <div class="col-md-4 mb-3">
+        <label><b>ค่ารักษาพยาบาล</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_NURSE }}<br>
     </div>
-    <div class="col-md-6 mb-2">
-        <div class="tile-body">
-            <table class="table table-hover table-sm">
-                <thead>
-                    <tr>
-                        <th class="text-nowrap text-center">ต่อเดือน</th>
-                        <th class="text-nowrap text-center">ต่อปี</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[4]/12) }}</td>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[4]) }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="col-md-4 mb-3">
+        <label><b>ประกันภัยต่างๆ</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_INSURANCE }}<br>
     </div>
-</div>
-<div class="form-row">
-    <div class="col-md-12 mb-2">
-        <label><b>5. ค่าที่อยู่อาศัยและเครื่องใช้ภายในบ้าน ได้แก่ เงินสด/ดาวน์ ซื้อหรือเช่า ที่ดิน, เงินสด/ผ่อน ชื้อเครื่องใช้ ในบ้าน, ของใช้ประจำวัน, ค่าไฟฟ้า/ประปา โทรศัพท์, ค่าภาษีต่าง ๆ เป็นต้น</b></label>
+    <div class="col-md-4 mb-3">
+        <label><b>ด้านสังคม</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_SOCIETY }}<br>
     </div>
-    <div class="col-md-6 mb-2">
-        <div class="tile-body">
-            <table class="table table-hover table-sm">
-                <thead>
-                    <tr>
-                        <th class="text-nowrap text-center">ต่อเดือน</th>
-                        <th class="text-nowrap text-center">ต่อปี</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[5]/12) }}</td>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[5]) }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    
+    <div class="col-md-4 mb-3">
+        <label><b>บันเทิงท่องเที่ยว</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_TRAVEL }}<br>
     </div>
-</div>
-<div class="form-row">
-    <div class="col-md-12 mb-2">
-        <label><b>6. ค่าใช้จ่ายเพื่อการลงทุน สังคม พักผ่อน ได้แก่ ฝากธนาคาร ออกเงินกู้, จ่ายดอกเบี้ย ผ่อนใช้หนี้, ทำบุญ/บริจาค ช่วยซอง/จัดงาน, ใช้จ่ายเพื่อ การพักผ่อน, ส่งไปให้ญาติ ที่อยู่ที่อื่น, เสี่ยงโชค เป็นต้น</b></label>
+    <div class="col-md-4 mb-3">
+        <label><b>เสี่ยงโชค</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_RISK }}<br>
     </div>
-    <div class="col-md-6 mb-2">
-        <div class="tile-body">
-            <table class="table table-hover table-sm">
-                <thead>
-                    <tr>
-                        <th class="text-nowrap text-center">ต่อเดือน</th>
-                        <th class="text-nowrap text-center">ต่อปี</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[6]/12) }}</td>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[6]) }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="col-md-4 mb-3">
+        <label><b>เหล้า บุหรี่</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_ALCOHOL }}<br>
     </div>
-</div>
-<div class="form-row">
-    <div class="col-md-12 mb-2">
-        <label><b>7. ค่าใช้จ่ายในการศึกษา/เรียนรู้ ได้แก่ ค่าเทอม/เรียนพิเศษ, อุปกรณ์เรียน /ชุดนักเรียน, หนังสีอพิมพ์/นิตยสาร เป็นต้น</b></label>
+
+    
+    <div class="col-md-4 mb-3">
+        <label><b>หนี้สิน</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_DEBT }}<br>
     </div>
-    <div class="col-md-6 mb-2">
-        <div class="tile-body">
-            <table class="table table-hover table-sm">
-                <thead>
-                    <tr>
-                        <th class="text-nowrap text-center">ต่อเดือน</th>
-                        <th class="text-nowrap text-center">ต่อปี</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[7]/12) }}</td>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[7]) }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="col-md-4 mb-3">
+        <label><b>อื่นๆ ระบุ</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_OTHER_EXPENSES }}<br>
     </div>
-</div>
-<div class="form-row">
-    <div class="col-md-12 mb-2">
-        <label><b>8. ค่าใช้จ่าย อื่น ๆ</b></label>
-    </div>
-    <div class="col-md-6 mb-2">
-        <div class="tile-body">
-            <table class="table table-hover table-sm">
-                <thead>
-                    <tr>
-                        <th class="text-nowrap text-center">ต่อเดือน</th>
-                        <th class="text-nowrap text-center">ต่อปี</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[8]/12) }}</td>
-                        <td class="text-nowrap text-center" width="1">{{ number_format($ECON_EXP_SUM[8]) }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+
+    <div class="col-md-12 mb-3">
+        <label><b>หมายเหตุ</b> </label>
+        {{ $resultEcon->HOUSEHOLD_ECON_NOTE_EXPENSES }}<br>
     </div>
 </div>
