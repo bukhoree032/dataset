@@ -130,15 +130,15 @@ class StoreController extends BaseManageController
         
         $data['result'] = $this->repository->get($id);
         
-        if(isset($data['result']->householdInfo->householdEcon->id)){
-            $data['resultEcon'] = $this->EconRepository->get($data['result']->householdInfo->householdEcon->id);
-            foreach($data['resultEcon']->HOUSEHOLD_ECON_INCOME_TYPE as $index => $value){
-                $data['INCOME_TYPE'][$index] = format_number($data['resultEcon']->HOUSEHOLD_ECON_INCOME_TYPE[$index]);
-            }
-            foreach($data['resultEcon']->HOUSEHOLD_ECON_EXP_SUM as $index => $value){
-                $data['ECON_EXP_SUM'][$index] = format_number($data['resultEcon']->HOUSEHOLD_ECON_EXP_SUM[$index]);
-            }
-        }
+        // if(isset($data['result']->householdInfo->householdEcon->id)){
+        //     $data['resultEcon'] = $this->EconRepository->get($data['result']->householdInfo->householdEcon->id);
+        //     foreach($data['resultEcon']->HOUSEHOLD_ECON_INCOME_TYPE as $index => $value){
+        //         $data['INCOME_TYPE'][$index] = format_number($data['resultEcon']->HOUSEHOLD_ECON_INCOME_TYPE[$index]);
+        //     }
+        //     foreach($data['resultEcon']->HOUSEHOLD_ECON_EXP_SUM as $index => $value){
+        //         $data['ECON_EXP_SUM'][$index] = format_number($data['resultEcon']->HOUSEHOLD_ECON_EXP_SUM[$index]);
+        //     }
+        // }
         if(isset($data['result']->householdInfo->HouseholdEnviro->id)){
             $data['resultEnviro'] = $this->EnviroRepository->get($data['result']->householdInfo->HouseholdEnviro->id);
         }

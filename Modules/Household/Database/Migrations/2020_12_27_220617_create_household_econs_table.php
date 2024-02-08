@@ -15,11 +15,33 @@ class CreateHouseholdEconsTable extends Migration
     {
         Schema::create('household_econs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('HOUSEHOLD_ECON_INCOME_TYPE')->nullable();
-            $table->string('HOUSEHOLD_ECON_INCOME')->nullable();
-            $table->string('HOUSEHOLD_ECON_INCOME_DATEDIFF')->comment('วันที่ไม่มีรายได้')->nullable();
-            $table->string('HOUSEHOLD_ECON_EXP_SUM')->nullable();
-            $table->string('HOUSEHOLD_ECON_EXP', 255)->nullable();
+            $table->string('HOUSEHOLD_ECON_GENERAL')->nullable();
+            $table->string('HOUSEHOLD_ECON_AGRI')->nullable();
+            $table->string('HOUSEHOLD_ECON_LIVESTOCK')->nullable();
+            $table->string('HOUSEHOLD_ECON_FISHING')->nullable();
+            $table->string('HOUSEHOLD_ECON_OCCU_OTHER')->nullable();
+            $table->string('HOUSEHOLD_ECON_CHILD')->nullable();
+            $table->string('HOUSEHOLD_ECON_WELFARE')->nullable();
+            $table->string('HOUSEHOLD_ECON_OTHER_REVENUE')->nullable();
+            $table->string('HOUSEHOLD_ECON_NOTE_REVENUE')->nullable();
+
+            $table->string('HOUSEHOLD_ECON_FOOD')->nullable();
+            $table->string('HOUSEHOLD_ECON_WATER')->nullable();
+            $table->string('HOUSEHOLD_ECON_ELECTRICITY')->nullable();
+            $table->string('HOUSEHOLD_ECON_TEL')->nullable();
+            $table->string('HOUSEHOLD_ECON_INTERNET')->nullable();
+            $table->string('HOUSEHOLD_ECON_STUDY')->nullable();
+            $table->string('HOUSEHOLD_ECON_NURSE')->nullable();
+            $table->string('HOUSEHOLD_ECON_INSURANCE')->nullable();
+            $table->string('HOUSEHOLD_ECON_SOCIETY')->nullable();
+            $table->string('HOUSEHOLD_ECON_TRAVEL')->nullable();
+            $table->string('HOUSEHOLD_ECON_RISK')->nullable();
+            $table->string('HOUSEHOLD_ECON_ALCOHOL')->nullable();
+            $table->string('HOUSEHOLD_ECON_DEBT')->nullable();
+            $table->string('HOUSEHOLD_ECON_OTHER_EXPENSES')->nullable();
+            $table->string('HOUSEHOLD_ECON_NOTE_EXPENSES')->nullable();
+
+
             $table->string('HOUSEHOLD_ECON_HOUSE_LIST')->nullable();
             $table->string('HOUSEHOLD_ECON_HOUSE_NO')->nullable();
             $table->string('HOUSEHOLD_ECON_LAND')->nullable();

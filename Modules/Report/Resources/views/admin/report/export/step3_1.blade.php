@@ -55,7 +55,7 @@
     @foreach($data as $key => $value)
             @for ($a=1; $a <= 8; $a++)
                 
-                @if(isset($value->HOUSEHOLD_ECON_INCOME_TYPE[$a])!='')
+                @if(isset($value->HOUSEHOLD_ECON_INCOME_TYPE[$a])!='') {{-- น่าสนใจ HOUSEHOLD_ECON_INCOME_TYPE --}}
                     @if (is_numeric($value->HOUSEHOLD_ECON_INCOME_TYPE[$a]) )
                         @php $INCOME = $value->HOUSEHOLD_ECON_INCOME_TYPE[$a]; @endphp
                         @php $INCOME /= 12; @endphp

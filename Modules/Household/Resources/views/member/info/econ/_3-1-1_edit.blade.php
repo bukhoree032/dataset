@@ -1,116 +1,56 @@
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div class="row">
-            <div class="form-group col-md-6">
-                <label class="red-start">1. เงินเดือน/ค่าจ้าง(ต่อปี) </label>
-                <input type="text" class="form-control @error('HOUSEHOLD_ECON_INCOME_TYPE.1') is-invalid @enderror" name="HOUSEHOLD_ECON_INCOME_TYPE[1]" value="{{ $result->HOUSEHOLD_ECON_INCOME_TYPE[1] }}" />
-                <x-error-message title="HOUSEHOLD_ECON_INCOME_TYPE[1]" />
+            <div class="form-group col-md-4">
+                <label class="red-start">รับจ้างทั่วไป </label>
+                <input type="text" class="form-control @error('HOUSEHOLD_ECON_GENERAL') is-invalid @enderror" name="HOUSEHOLD_ECON_GENERAL" value="{{ $result->HOUSEHOLD_ECON_GENERAL }}" />
+                <x-error-message title="HOUSEHOLD_ECON_GENERAL" />
             </div>
-            <div class="form-group col-md-6">
-                <label>เลือกเดือนเดือนที่ไม่ได้รายได้</label>
-                <div class="dropdown-check-list form-control" tabindex="100">
-                    <span class="anchor " id="input-INCOME1" data-label="">เลือกเดือน</span>
-                    <ul class="items">
-                        @foreach(__jobs_m() as $index => $value)
-                        <li>
-                            <input type="checkbox" name="HOUSEHOLD_ECON_INCOME[1][{{ $index }}]" class="input-INCOME1" data-label="{{ $value['label'] }}" value="{{ $value['id'] }}" @if(isset($result->HOUSEHOLD_ECON_INCOME[1][$index]) && ($result->HOUSEHOLD_ECON_INCOME[1][$index] == $value['id'])) checked @endif/>
-                            {{ $value['label'] }}
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
+            <div class="form-group col-md-4">
+                <label class="red-start">เกษตร </label>
+                <input type="text" class="form-control @error('HOUSEHOLD_ECON_AGRI') is-invalid @enderror" name="HOUSEHOLD_ECON_AGRI" value="{{ $result->HOUSEHOLD_ECON_AGRI }}" />
+                <x-error-message title="HOUSEHOLD_ECON_AGRI" />
             </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label class="red-start">2. รายรับจากการทำการทำการเกษตร(ต่อปี)</label>
-                <input type="text" class="form-control @error('HOUSEHOLD_ECON_INCOME_TYPE.2') is-invalid @enderror" name="HOUSEHOLD_ECON_INCOME_TYPE[2]" value="{{ $result->HOUSEHOLD_ECON_INCOME_TYPE[2] }}" />
-                <x-error-message title="HOUSEHOLD_ECON_INCOME_TYPE[2]" />
+            <div class="form-group col-md-4">
+                <label class="red-start">ปศุสัตว์ </label>
+                <input type="text" class="form-control @error('HOUSEHOLD_ECON_LIVESTOCK') is-invalid @enderror" name="HOUSEHOLD_ECON_LIVESTOCK" value="{{ $result->HOUSEHOLD_ECON_LIVESTOCK }}" />
+                <x-error-message title="HOUSEHOLD_ECON_LIVESTOCK" />
             </div>
-            <div class="form-group col-md-6">
-                <label>เลือกเดือนเดือนที่ไม่ได้รายได้</label>
-                <div class="dropdown-check-list form-control" tabindex="100">
-                    <span class="anchor" id="input-INCOME2">เลือกเดือน</span>
-                    <ul class="items">
-                        @foreach(__jobs_m() as $index => $value)
-                        <li>
-                            <input type="checkbox" name="HOUSEHOLD_ECON_INCOME[2][{{ $index }}]" class="input-INCOME2" data-label="{{ $value['label'] }}" value="{{ $value['id'] }}" @if(isset($result->HOUSEHOLD_ECON_INCOME[2][$index]) && ($result->HOUSEHOLD_ECON_INCOME[2][$index] == $value['id'])) checked @endif/>
-                            {{ $value['label'] }}
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
+
+            
+            <div class="form-group col-md-4">
+                <label class="red-start">ประมง </label>
+                <input type="text" class="form-control @error('HOUSEHOLD_ECON_FISHING') is-invalid @enderror" name="HOUSEHOLD_ECON_FISHING" value="{{ $result->HOUSEHOLD_ECON_FISHING }}" />
+                <x-error-message title="HOUSEHOLD_ECON_FISHING" />
             </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label class="red-start">3. รายได้จากการประกอบธุรกิจ/ค้าขาย(ต่อปี)</label>
-                <input type="text" class="form-control @error('HOUSEHOLD_ECON_INCOME_TYPE.3') is-invalid @enderror" name="HOUSEHOLD_ECON_INCOME_TYPE[3]" value="{{ $result->HOUSEHOLD_ECON_INCOME_TYPE[3] }}" />
-                <x-error-message title="HOUSEHOLD_ECON_INCOME_TYPE[3]" />
+            <div class="form-group col-md-4">
+                <label class="red-start">อื่นๆ ระบุ </label>
+                <input type="text" class="form-control @error('HOUSEHOLD_ECON_OCCU_OTHER') is-invalid @enderror" name="HOUSEHOLD_ECON_OCCU_OTHER" value="{{ $result->HOUSEHOLD_ECON_OCCU_OTHER }}" />
+                <x-error-message title="HOUSEHOLD_ECON_OCCU_OTHER" />
             </div>
-            <div class="form-group col-md-6">
-                <label>เลือกเดือนเดือนที่ไม่ได้รายได้</label>
-                <div class="dropdown-check-list form-control" tabindex="100">
-                    <span class="anchor " id="input-INCOME3">เลือกเดือน</span>
-                    <ul class="items">
-                        @foreach(__jobs_m() as $index => $value)
-                        <li>
-                            <input type="checkbox" name="HOUSEHOLD_ECON_INCOME[3][{{ $index }}]" class="input-INCOME3" data-label="{{ $value['label'] }}" value="{{ $value['id'] }}" @if(isset($result->HOUSEHOLD_ECON_INCOME[3][$index]) && ($result->HOUSEHOLD_ECON_INCOME[3][$index] == $value['id'])) checked @endif/>
-                            {{ $value['label'] }}
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
+            <div class="form-group col-md-4">
             </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label class="red-start">4. รายได้จากทรัพย์สิน(ต่อปี)</label>
-                <input type="text" class="form-control @error('HOUSEHOLD_ECON_INCOME_TYPE.4') is-invalid @enderror" name="HOUSEHOLD_ECON_INCOME_TYPE[4]" value="{{ $result->HOUSEHOLD_ECON_INCOME_TYPE[4] }}" />
-                <x-error-message title="HOUSEHOLD_ECON_INCOME_TYPE[4]" />
+            <div class="form-group col-md-4">
+                <label class="red-start">ลูก/หลาน </label>
+                <input type="text" class="form-control @error('HOUSEHOLD_ECON_CHILD') is-invalid @enderror" name="HOUSEHOLD_ECON_CHILD" value="{{ $result->HOUSEHOLD_ECON_CHILD }}" />
+                <x-error-message title="HOUSEHOLD_ECON_CHILD" />
             </div>
-            <div class="form-group col-md-6">
-                <label>เลือกเดือนเดือนที่ไม่ได้รายได้</label>
-                <div class="dropdown-check-list form-control" tabindex="100">
-                    <span class="anchor " id="input-INCOME4">เลือกเดือน</span>
-                    <ul class="items">
-                        @foreach(__jobs_m() as $index => $value)
-                        <li>
-                            <input type="checkbox" name="HOUSEHOLD_ECON_INCOME[4][{{ $index }}]" class="input-INCOME4" data-label="{{ $value['label'] }}" value="{{ $value['id'] }}" @if(isset($result->HOUSEHOLD_ECON_INCOME[4][$index]) && ($result->HOUSEHOLD_ECON_INCOME[4][$index] == $value['id'])) checked @endif/>
-                            {{ $value['label'] }}
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
+
+            
+            <div class="form-group col-md-4">
+                <label class="red-start">สวัสดิการรัฐ </label>
+                <input type="text" class="form-control @error('HOUSEHOLD_ECON_WELFARE') is-invalid @enderror" name="HOUSEHOLD_ECON_WELFARE" value="{{ $result->HOUSEHOLD_ECON_WELFARE }}" />
+                <x-error-message title="HOUSEHOLD_ECON_WELFARE" />
             </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label class="red-start">5. รายได้จากแหล่งอื่นๆ(ต่อปี)</label>
-                <input type="text" class="form-control @error('HOUSEHOLD_ECON_INCOME_TYPE.5') is-invalid @enderror" name="HOUSEHOLD_ECON_INCOME_TYPE[5]" value="{{ $result->HOUSEHOLD_ECON_INCOME_TYPE[5] }}" />
-                <x-error-message title="HOUSEHOLD_ECON_INCOME_TYPE[5]" />
+            <div class="form-group col-md-4">
+                <label class="red-start">อื่นๆ ระบุ </label>
+                <input type="text" class="form-control @error('HOUSEHOLD_ECON_OTHER_REVENUE') is-invalid @enderror" name="HOUSEHOLD_ECON_OTHER_REVENUE" value="{{ $result->HOUSEHOLD_ECON_OTHER_REVENUE }}" />
+                <x-error-message title="HOUSEHOLD_ECON_OTHER_REVENUE" />
             </div>
-            <div class="form-group col-md-6">
-                <label>เลือกเดือนเดือนที่ไม่ได้รายได้</label>
-                <div class="dropdown-check-list form-control" tabindex="100">
-                    <span class="anchor " id="input-INCOME5">เลือกเดือน</span>
-                    <ul class="items">
-                        @foreach(__jobs_m() as $index => $value)
-                        <li>
-                            <input type="checkbox" name="HOUSEHOLD_ECON_INCOME[5][{{ $index }}]" class="input-INCOME5" data-label="{{ $value['label'] }}" value="{{ $value['id'] }}" @if(isset($result->HOUSEHOLD_ECON_INCOME[5][$index]) && ($result->HOUSEHOLD_ECON_INCOME[5][$index] == $value['id'])) checked @endif/>
-                            {{ $value['label'] }}
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
+            <div class="form-group col-md-4">
+                <label class="red-start">หมายเหตุ </label>
+                <input type="text" class="form-control @error('HOUSEHOLD_ECON_NOTE_REVENUE') is-invalid @enderror" name="HOUSEHOLD_ECON_NOTE_REVENUE" value="{{ $result->HOUSEHOLD_ECON_NOTE_REVENUE }}" />
+                <x-error-message title="HOUSEHOLD_ECON_NOTE_REVENUE" />
             </div>
         </div>
     </div>

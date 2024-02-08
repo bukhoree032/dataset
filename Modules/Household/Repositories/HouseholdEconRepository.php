@@ -31,10 +31,6 @@ class HouseholdEconRepository extends BaseRepository
     public function get($id)
     {
         $result =  $this->classModelName::findOrFail($id);
-        $result->HOUSEHOLD_ECON_INCOME_TYPE  = unserialize($result->HOUSEHOLD_ECON_INCOME_TYPE);
-        $result->HOUSEHOLD_ECON_INCOME  = unserialize($result->HOUSEHOLD_ECON_INCOME);
-        $result->HOUSEHOLD_ECON_EXP_SUM  = unserialize($result->HOUSEHOLD_ECON_EXP_SUM);
-        $result->HOUSEHOLD_ECON_EXP  = unserialize($result->HOUSEHOLD_ECON_EXP);
         $result->HOUSEHOLD_ECON_HOUSE_LIST  = unserialize($result->HOUSEHOLD_ECON_HOUSE_LIST);
         $result->HOUSEHOLD_ECON_HOUSE_NO  = unserialize($result->HOUSEHOLD_ECON_HOUSE_NO);
         $result->HOUSEHOLD_ECON_LAND  = unserialize($result->HOUSEHOLD_ECON_LAND);
