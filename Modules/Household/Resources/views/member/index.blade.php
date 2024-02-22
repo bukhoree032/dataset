@@ -24,7 +24,6 @@
                     <th class="text-nowrap text-center">ผู้บันทึกข้อมูล</th>
                     <th class="text-nowrap text-center">วันที่สอบถาม</th>
                     <th class="text-nowrap text-center">สถานะ</th>
-                    <th class="text-nowrap text-center">สร้างเมื่อ</th>
                     <th class="text-nowrap text-center">ดำเนินการ</th>
                 </tr>
             </thead>
