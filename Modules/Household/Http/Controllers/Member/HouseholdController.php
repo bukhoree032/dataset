@@ -6,15 +6,18 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\BaseMemberManageController;
 use Modules\Household\Repositories\StoreRepository as StoreRepository;
+use Modules\Household\Repositories\HouseholdRepository as HouseholdRepository;
 
 class HouseholdController extends BaseMemberManageController
 {
     protected $repository;
     protected $storeRepository;
+    protected $householdRepository;
 
-    public function __construct(StoreRepository $storeRepository)
+    public function __construct(StoreRepository $storeRepository,HouseholdRepository $householdRepository)
     {
         $this->storeRepository = $storeRepository;
+        $this->householdRepository = $householdRepository;
 
         $this->init([
             'body' => [
@@ -44,13 +47,39 @@ class HouseholdController extends BaseMemberManageController
             $query_string = "?export=pdf";
         }
 
+        $data['lists'] = $this->householdRepository->historyOfMember();
+
+        $data['query_string'] = $query_string;
+
+        $data['approveds'] = $this->getApproveds();
+
+        return $this->render('household::member.household', $data);
+    }
+    
+    /**
+     * Method index
+     *
+     * @param Request $request [explicite description]
+     *
+     * @return void
+     */
+    public function house(Request $request, $id)
+    {
+        $data['id'] = $id;
+        
+        if ($request->has('from') && $request->has('to')) {
+            $query_string = "?" . http_build_query($request->all()) . "&export=xlxs";
+        } else {
+            $query_string = "?export=pdf";
+        }
+
         if ($request->has('date') || $request->has('code')) {
             $data['lists'] = $this->repository->search([
                 'date' => $request->input('date'),
                 'code' => $request->input('code')
             ]);
         } else {
-            $data['lists'] = $this->storeRepository->historyOfMember(Auth::guard('member')->user()->id);
+            $data['lists'] = $this->storeRepository->historyOfMember($id);
         }
         $data['query_string'] = $query_string;
         $data['approveds'] = $this->getApproveds();

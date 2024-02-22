@@ -21,6 +21,7 @@ class HouseholdStoreRequest extends FormRequest
             'STORE_FORM_NUMBER' => ['required'],
             'STORE_COLLECTOR' => ['required'],
             'STORE_PERSON.0' => ['required'],
+            'HOUSE_ID' => ['required'],
         ];
     }
 
@@ -39,6 +40,7 @@ class HouseholdStoreRequest extends FormRequest
             'STORE_FORM_NUMBER.required' => 'โปรดระบุหมายเลขแบบสอบถาม',
             'STORE_COLLECTOR.required' => 'โปรดระบุผู้เก็บข้อมูล',
             'STORE_PERSON.0.required' => 'โปรดระบุผู้ให้ข้อมูลอย่างน้อย 1 คน',
+            'HOUSE_ID.required' => 'โปรดระบุครั้งที่เก็บข้อมูล',
         ];
     }
 

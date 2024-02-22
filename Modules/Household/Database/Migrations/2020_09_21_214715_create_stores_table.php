@@ -24,6 +24,7 @@ class CreateStoresTable extends Migration
             $table->string('STORE_CHECK')->nullable();
             $table->string('STORE_SAVE')->nullable();
             $table->string('STORE_PERSON')->nullable();
+            $table->string('HOUSE_ID')->nullable();
 
             $table->unsignedBigInteger('member_id')->nullable();
             $table->foreign('member_id', 'fk_members_stores')

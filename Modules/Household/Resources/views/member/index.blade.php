@@ -7,7 +7,7 @@
             ข้อมูลรายการ
         </h3>
         <p>
-            <a class="btn btn-primary" href="{{ route('member.household.store.create') }}"><i class="fa fa-plus-circle fa-fw"></i>สร้างรายการ
+            <a class="btn btn-primary" href="{{ route('member.household.store.create', $id) }}"><i class="fa fa-plus-circle fa-fw"></i>สร้างรายการ
             </a>
             <a class="btn btn-secondary" href="{{ url()->current() }}"><i class="fas fa-sync fa-fw"></i>Refresh </a>
         </p>

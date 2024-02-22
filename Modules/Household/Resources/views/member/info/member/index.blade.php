@@ -7,7 +7,7 @@
                 ข้อมูลสมาชิกในครัวเรือน
             </h3>
             <p>
-                <!-- <a class="btn btn-primary" href="{{ route('member.household.store.create') }}"><i class="fa fa-plus-circle fa-fw"></i>เพิ่มสมาชิก</a> -->
+                {{-- <!-- <a class="btn btn-primary" href="{{ route('member.household.store.create') }}"><i class="fa fa-plus-circle fa-fw"></i>เพิ่มสมาชิก</a> --> --}}
                 <a class="btn btn-primary"  href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-plus-circle fa-fw"></i>เพิ่มสมาชิก</a>
                 {{--<a class="btn btn-outline-success" href="{{ route('member.household.index') }}{{ $query_string }}"><i class="fas fa-file-pdf fa-fw"></i>ส่งออกรายงาน (*.PDF) </a>--}}
                 <a class="btn btn-secondary" href="{{ url()->current() }}"><i class="fas fa-sync fa-fw"></i>Refresh </a>

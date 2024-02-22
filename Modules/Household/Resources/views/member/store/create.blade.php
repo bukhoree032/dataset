@@ -6,7 +6,7 @@
         <div class="col-10">
             <x-alert-error-message/>
 
-            <form action="{{ route('member.household.store.create') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('member.household.store.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 
                 <div class="tile">
@@ -17,9 +17,11 @@
                                 <div class="form-row mb-3">
                                     
                                     <input type="hidden" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_ROUND" value="1" placeholder="หมายเลขแบบสอบถาม"/>
+                                    
+                                    <input type="hidden" class="form-control" name="HOUSE_ID" value="{{$result->id}}"/>
                                     <div class="col-md-3 mb-3">
                                         <label class="red-start">หมายเลขแบบสอบถาม</label>
-                                        <input type="text" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_NUMBER" value="{{ old('STORE_FORM_NUMBER') }}" placeholder="หมายเลขแบบสอบถาม"/>
+                                        <input type="text" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_NUMBER" value="{{ $result->H_ID }}" placeholder="หมายเลขแบบสอบถาม" readonly/>
                                         <x-error-message title="STORE_FORM_NUMBER"/>
                                     </div>
                                     <div class="form-group col-md-3">

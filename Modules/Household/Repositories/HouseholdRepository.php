@@ -3,15 +3,15 @@
 namespace Modules\Household\Repositories;
 
 use App\Repositories\BaseRepository;
-use Modules\Household\Entities\Store;
+use Modules\Household\Entities\Household;
 use Auth;
 
-class StoreRepository extends BaseRepository
+class HouseholdRepository extends BaseRepository
 {
     public function __construct()
     {
         $this->init([
-            'class_model_name' => Store::class
+            'class_model_name' => Household::class
         ]);
     }
 
@@ -32,34 +32,6 @@ class StoreRepository extends BaseRepository
     public function get($id)
     {
         $result = $this->classModelName::findOrFail($id);
-
-        function extract_int($str){
-            $str = explode(".",$str);
-            if(isset($str[1])){
-                return $str[1];
-            }else{
-                return $str[0];
-            }
-        }
-
-        $result->STORE_PERSON = unserialize($result->STORE_PERSON);
-
-        
-        if(isset($result->householdInfo->householdPolitical)){
-            $result->householdInfo->householdPolitical->HOUSEHOLD_POLITICAL_COM_ELEC = unserialize($result->householdInfo->householdPolitical->HOUSEHOLD_POLITICAL_COM_ELEC);
-            foreach($result->householdInfo->householdPolitical->HOUSEHOLD_POLITICAL_COM_ELEC as $key_OCCUP_ID => $value_OCCUP_ID){
-                $result1[$key_OCCUP_ID] = extract_int($value_OCCUP_ID);
-                $result->householdInfo->householdPolitical->HOUSEHOLD_POLITICAL_COM_ELEC = $result1;
-            }
-        }  
-
-        // if(isset($result->householdInfo->householdCommunicat)){
-        //     // $result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID = unserialize($result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID);
-        //     foreach($result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID as $key_OCCUP_ID => $value_OCCUP_ID){
-        //         $result1[$key_OCCUP_ID] = extract_int($value_OCCUP_ID);
-        //         $result->householdInfo->householdCommunicat->HOUSEHOLD_COMUNICAT_OCCUP_ID = $result1;
-        //     }
-        // }
         
         return $result;
     }
@@ -181,11 +153,11 @@ class StoreRepository extends BaseRepository
      *
      * @return mixed
      */
-    public function historyOfMember($id)
+    public function historyOfMember()
     {
         $q = $this->classModelName::query();
 
-        $q->where('HOUSE_ID', $id);
+        // $q->where('member_id', $id);
         if (empty($sort)) {
             $q->orderBy('id', 'DESC');
         } else {

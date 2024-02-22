@@ -6,6 +6,7 @@ use App\Http\Controllers\BaseMemberManageController;
 use Illuminate\Http\Request;
 use Modules\Household\Http\Requests\HouseholdStoreRequest;
 use Modules\Household\Repositories\StoreRepository as Repository;
+use Modules\Household\Repositories\HouseholdRepository as HouseholdRepository;
 use Modules\Household\Repositories\HouseholdInfoRepository as InfoRepository;
 use Modules\Household\Repositories\HouseholdMemberRepository as MemberRepository;
 use Modules\Household\Repositories\HouseholdEconRepository as EconRepository;
@@ -14,14 +15,16 @@ use Modules\Household\Repositories\HouseholdEnviroRepository as EnviroRepository
 class StoreController extends BaseMemberManageController
 {
     protected $repository;
+    protected $HouseholdRepository;
     protected $InfoRepository;
     protected $MemberRepository;
     protected $EconRepository;
     protected $EnviroRepository;
 
-    public function __construct(Repository $repository,InfoRepository $InfoRepository, MemberRepository $MemberRepository, EconRepository $EconRepository, EnviroRepository $EnviroRepository)
+    public function __construct(Repository $repository,InfoRepository $InfoRepository, MemberRepository $MemberRepository, EconRepository $EconRepository, EnviroRepository $EnviroRepository, HouseholdRepository $HouseholdRepository)
     {
         $this->repository = $repository;
+        $this->HouseholdRepository = $HouseholdRepository;
         $this->InfoRepository = $InfoRepository;
         $this->MemberRepository = $MemberRepository;
         $this->EconRepository = $EconRepository;
@@ -44,18 +47,17 @@ class StoreController extends BaseMemberManageController
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function create()
+    public function create($id)
     {
-        // $data['provinces'] = $this->getProvinces();
+        $data['result'] = $this->HouseholdRepository->get($id);
 
-        $data['store_id'] = '1';
         $data['provinces'] = $this->getProvinces();
 
         $data['scripts'] = [
             asset('assets/@site_control/js/app/modules/info/controllers/info.controller.js'),
             asset('assets/@site_control/js/app/modules/info/providers/info.provider.js'),
         ];
-        // dd($data['scripts']);
+
         return $this->render('household::member.store.create', $data);
     }
 

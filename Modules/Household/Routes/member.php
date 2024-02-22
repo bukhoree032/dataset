@@ -16,7 +16,9 @@ Route::prefix('member')->name('member.')->namespace('Member')->group(function ()
         Route::prefix('household')->group(function () {
             Route::get('/', 'HouseholdController@index')->name('index');
 
-            Route::get('store/create', 'StoreController@create')->name('store.create');
+            Route::get('/house/{id}', 'HouseholdController@house')->name('house');
+
+            Route::get('store/create/{id}', 'StoreController@create')->name('store.create');
             Route::post('store/create', 'StoreController@store')->name('store.store');
             Route::get('store/{store}/edit', 'StoreController@edit')->name('store.edit');
             Route::put('store/{store}/edit', 'StoreController@update')->name('store.update');

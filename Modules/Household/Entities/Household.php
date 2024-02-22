@@ -4,23 +4,22 @@ namespace Modules\Household\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Store extends Model
+class household extends Model
 {
-    protected $table = 'stores';
+    protected $table = 'household';
 
     protected $fillable = [
-        'STORE_PERSON',
-        'STORE_DATE',
-        'STORE_TIME',
-        'STORE_TO_TIME',
-        'STORE_FORM_ROUND',
-        'STORE_FORM_NUMBER',
-        'STORE_COLLECTOR',
-        'STORE_CHECK',
-        'STORE_SAVE',
-        'STORE_PERSON',
-        'HOUSE_ID',
-        'member_id'
+        'H_ID',
+        'H_NAME',
+        'H_HOUSE_NUMBER',
+        'H_VILLAGE',
+        'H_MOO',
+        'H_PROVINCE',
+        'H_AMPHURE',
+        'H_DISTRICT',
+        'H_TEL',
+        'H_YEAR',
+        'H_ACTIVITY'
     ];
 
     public function householdInfo()
