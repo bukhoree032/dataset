@@ -17,6 +17,11 @@ Route::prefix('member')->name('member.')->namespace('Member')->group(function ()
             Route::get('/', 'HouseholdController@index')->name('index');
 
             Route::get('/house/{id}', 'HouseholdController@house')->name('house');
+            
+            Route::get('/help/{id}', 'HelpController@index')->name('help');
+            Route::post('help/create', 'HelpController@help')->name('help.help');
+            // Route::post('help/edit', 'HelpController@update')->name('help.update');
+            Route::delete('help/{id}', 'HelpController@destroy')->name('help.destroy');
 
             Route::get('store/create/{id}', 'StoreController@create')->name('store.create');
             Route::post('store/create', 'StoreController@store')->name('store.store');
