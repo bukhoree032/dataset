@@ -11,6 +11,7 @@ class Help extends Model
     protected $fillable = [
         'HE_ID',
         'HE_NAME',
+        'HE_RECEIVE_KNOW',
         'HE_RECEIVE',
         'HE_YEAR',
         'HE_DATE',
