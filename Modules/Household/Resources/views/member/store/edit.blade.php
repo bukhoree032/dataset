@@ -15,7 +15,7 @@
                             <div class="col-md-12">
                                 <div class="form-row">
                                     
-                                    <input type="hidden" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_ROUND" value="{{ $result->STORE_FORM_ROUND }}" placeholder="หมายเลขแบบสอบถาม"/>
+                                    <input type="hidden" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_ROUND" value="{{ $result->STORE_FORM_ROUND }}" placeholder="HC"/>
                                     {{-- <div class="col-md-2 mb-2">
                                         <label class="red-start">เก็บข้อมูลครั้งที่</label>
                                         <select name="STORE_FORM_ROUND" class="form-control @error('STORE_FORM_ROUND') is-invalid @enderror" ng-model="STORE_FORM_ROUND" ng-change="getAmphures(STORE_FORM_ROUND)">
@@ -29,8 +29,8 @@
                                         <x-error-message title="STORE_FORM_ROUND"/>
                                     </div> --}}
                                     <div class="col-md-3 mb-3">
-                                        <label class="red-start">หมายเลขแบบสอบถาม</label>
-                                        <input type="text" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_NUMBER" value="{{ $result->STORE_FORM_NUMBER }}" placeholder="หมายเลขแบบสอบถาม"/>
+                                        <label class="red-start">HC</label>
+                                        <input type="text" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_NUMBER" value="{{ $result->STORE_FORM_NUMBER }}" placeholder="HC"/>
                                         <x-error-message title="STORE_FORM_NUMBER"/>
                                     </div>
                                     <div class="col-md-3 mb-3">
