@@ -20,7 +20,8 @@ Route::prefix('member')->name('member.')->namespace('Member')->group(function ()
             
             Route::get('/help/{id}', 'HelpController@index')->name('help');
             Route::post('help/create', 'HelpController@help')->name('help.help');
-            // Route::post('help/edit', 'HelpController@update')->name('help.update');
+            Route::get('help/edit/{id}', 'HelpController@edit')->name('help.edit');
+            Route::put('help/edit', 'HelpController@update')->name('help.update');
             Route::delete('help/{id}', 'HelpController@destroy')->name('help.destroy');
 
             Route::get('store/create/{id}', 'StoreController@create')->name('store.create');

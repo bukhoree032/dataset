@@ -103,12 +103,23 @@ class HelpController extends BaseMemberManageController
      * @param $id
      * @return \Illuminate\Http\RedirectResponse
      */
+    public function edit($id)
+    {
+        $data['lists'] = $this->Repository->get($id);
+
+        return $this->render('household::member.help.edit', $data);
+    }
+
+    /**
+     * @param HouseholdStoreRequest $request
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update(Request $request)
     {
-        dd('asd');
-        $result = $this->Repository->update($request->all(), $id);
+        $result = $this->Repository->update($request->all(), $request->HE_ID);
 
-        return redirect()->route('member.household.store.edit', $result->id);
+        return redirect()->route('member.household.help', [$request->HE_ID]);
     }
 
 }
