@@ -16,12 +16,12 @@
                             <div class="col-md-12">
                                 <div class="form-row mb-3">
                                     
-                                    <input type="hidden" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_ROUND" value="1" placeholder="หมายเลขแบบสอบถาม"/>
+                                    <input type="hidden" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_ROUND" value="1" placeholder="HC"/>
                                     
                                     <input type="hidden" class="form-control" name="HOUSE_ID" value="{{$result->id}}"/>
                                     <div class="col-md-3 mb-3">
-                                        <label class="red-start">หมายเลขแบบสอบถาม</label>
-                                        <input type="text" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_NUMBER" value="{{ $result->H_ID }}" placeholder="หมายเลขแบบสอบถาม" readonly/>
+                                        <label class="red-start">HC</label>
+                                        <input type="text" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_NUMBER" value="{{ $result->H_ID }}" placeholder="HC" readonly/>
                                         <x-error-message title="STORE_FORM_NUMBER"/>
                                     </div>
                                     <div class="form-group col-md-3">
@@ -127,8 +127,8 @@
                             <div class="col-md-12">
                                 <div class="form-row">
                                     {{-- <div class="col-md-3 mb-3">
-                                        <label class="red-start">หมายเลขแบบสอบถาม</label>
-                                        <input type="text" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_NUMBER" value="{{ old('STORE_FORM_NUMBER') }}" placeholder="หมายเลขแบบสอบถาม"/>
+                                        <label class="red-start">HC</label>
+                                        <input type="text" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_NUMBER" value="{{ old('STORE_FORM_NUMBER') }}" placeholder="HC"/>
                                         <x-error-message title="STORE_FORM_NUMBER"/>
                                     </div> --}}
                                     <div class="col-md-4 mb-3">

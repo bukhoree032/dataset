@@ -47,7 +47,7 @@
                                         <label><b>เก็บข้อมูล :</b> ครั้งที่ {{ $value->STORE_FORM_ROUND }}</label>
                                     </div>
                                     <div class="col-md-3 mb-3">
-                                        <label><b>หมายเลขแบบสอบถาม :</b> {{ $result->STORE_FORM_NUMBER }} </label>
+                                        <label><b>HC :</b> {{ $result->STORE_FORM_NUMBER }} </label>
                                     </div>
                                     <div class="col-md-2 mb-2">
                                         <label><b>วันที่สอบถาม :</b> {{ $result->STORE_DATE }} </label>

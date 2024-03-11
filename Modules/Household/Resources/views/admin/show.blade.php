@@ -46,7 +46,7 @@
                     <tr>
                         <th class="text-nowrap text-center">#</th>
                         <th class="text-nowrap text-center">เก็บข้อมูล</th>
-                        <th class="text-nowrap text-center">หมายเลขฯ</th>
+                        <th class="text-nowrap text-center">HC</th>
                         <th class="text-nowrap text-center">ชื่อ-นามสกุล</th>
                         <th class="text-nowrap text-center">จังหวัด</th>
                         <th class="text-nowrap text-center">อำเภอ</th>

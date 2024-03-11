@@ -37,7 +37,7 @@ class HouseholdStoreRequest extends FormRequest
             'STORE_TIME.required' => 'โปรดระบุเวลาเริ่มต้น',
             'STORE_TO_TIME.required' => 'โปรดระบุเวลาสิ้นสุด',
             'STORE_FORM_ROUND.required' => 'โปรดระบุครั้งที่เก็บข้อมูล',
-            'STORE_FORM_NUMBER.required' => 'โปรดระบุหมายเลขแบบสอบถาม',
+            'STORE_FORM_NUMBER.required' => 'โปรดระบุHC',
             'STORE_COLLECTOR.required' => 'โปรดระบุผู้เก็บข้อมูล',
             'STORE_PERSON.0.required' => 'โปรดระบุผู้ให้ข้อมูลอย่างน้อย 1 คน',
             'HOUSE_ID.required' => 'โปรดระบุครั้งที่เก็บข้อมูล',

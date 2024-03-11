@@ -22,9 +22,10 @@
                 <tr>
                     <th class="text-nowrap text-center">#</th>
                     <th class="text-nowrap text-center">ปี</th>
-                    <th class="text-nowrap text-center">หมายเลขฯ</th>
+                    <th class="text-nowrap text-center">HC</th>
                     <th class="text-nowrap text-center">ชื่อ - นามสกุล</th>
-                    <th class="text-nowrap text-center">ช่วยเหลือ</th>
+                    <th class="text-nowrap text-center">สบัยสนุน(ความรู้)</th>
+                    <th class="text-nowrap text-center">ช่วยเหลือ(อุปกรณ์)</th>
                     <th class="text-nowrap text-center">ดำเนินการ</th>
                 </tr>
             </thead>
@@ -35,6 +36,7 @@
                     <td class="text-center">{{ $value->HE_YEAR }}</td>
                     <td class="text-center">{{ $value->HE_ID }}</td>
                     <td class="text-center">{{ $value->HE_NAME }}</td>
+                    <td class="text-center">{{ $value->HE_RECEIVE_KNOW }}</td>
                     <td class="text-center">{{ $value->HE_RECEIVE }}</td>
                     <td width="1">
                         <div class="option-link">
@@ -44,9 +46,9 @@
                                 {{-- <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#Modal_Edit{{$value->id}}">
                                     แก้ไข
                                 </button> --}}
-                                {{-- <a type="button" href="{{ route('member.household.store.detail', $value->id) }}" class="btn btn-sm btn-success">
-                                    ดูรายละเอียด
-                                </a> --}}
+                                <a type="button" href="{{ route('member.household.help.edit', $value->id) }}" class="btn btn-sm btn-success">
+                                    แก้ไข
+                                </a>
                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('ท่านต้องการลบรายการนี้ใช่หรือไม่ ?')">
                                     ยกเลิก
                                 </button>

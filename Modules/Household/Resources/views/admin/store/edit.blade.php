@@ -27,8 +27,8 @@
                                         <x-error-message title="STORE_FORM_ROUND"/>
                                     </div>
                                     <div class="col-md-3 mb-3">
-                                        <label class="red-start">หมายเลขแบบสอบถาม</label>
-                                        <input type="text" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_NUMBER" value="{{ $result->STORE_FORM_NUMBER }}" placeholder="หมายเลขแบบสอบถาม"/>
+                                        <label class="red-start">HC</label>
+                                        <input type="text" class="form-control @error('STORE_FORM_NUMBER') is-invalid @enderror" name="STORE_FORM_NUMBER" value="{{ $result->STORE_FORM_NUMBER }}" placeholder="HC"/>
                                         <x-error-message title="STORE_FORM_NUMBER"/>
                                     </div>
                                     <div class="col-md-3 mb-3">

@@ -20,7 +20,7 @@
                     <tr>
                         <th class="text-nowrap text-center">#</th>
                         <th class="text-nowrap text-center">เก็บข้อมูล</th>
-                        <th class="text-nowrap text-center">หมายเลขฯ</th>
+                        <th class="text-nowrap text-center">HC</th>
                         <th class="text-nowrap text-center">ผู้เก็บข้อมูล</th>
                         <th class="text-nowrap text-center">ผู้ตรวจข้อมูล</th>
                         <th class="text-nowrap text-center">ผู้บันทึกข้อมูล</th>

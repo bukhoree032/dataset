@@ -16,7 +16,7 @@
                 <tr>
                     <th class="text-nowrap text-center">#</th>
                     <th class="text-nowrap text-center">ปี</th>
-                    <th class="text-nowrap text-center">หมายเลขฯ</th>
+                    <th class="text-nowrap text-center">HC</th>
                     <th class="text-nowrap text-center">ชื่อ - นามสกุล</th>
                     <th class="text-nowrap text-center">บ้านเลขที่</th>
                     <th class="text-nowrap text-center">หมู่</th>
