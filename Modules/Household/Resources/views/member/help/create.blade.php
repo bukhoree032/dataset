@@ -23,11 +23,23 @@
                                 <input type="text" class="form-control @error('HE_NAME') is-invalid @enderror" name="HE_NAME" value="" placeholder="ชื่อผู้ได้รับ"/>
                                 <x-error-message title="HE_NAME"/>
                             </div>
-                            <div class="form-group col-md-6 mb-6">
+                            {{-- <div class="form-group col-md-6 mb-6">
                                 <label class="red-start">ปี่ที่ได้รับ</label>
                                 <input type="text" class="form-control @error('HE_YEAR') is-invalid @enderror" name="HE_YEAR" value="" placeholder="ปี่ที่ได้รับ"/>
                                 <x-error-message title="HE_YEAR"/>
+                            </div> --}}
+                            <div class="form-group col-md-6 mb-6">
+                                <label class="red-start">ปี่ที่ได้รับ</label>
+                                <select name="HE_YEAR" class="form-control @error('HE_YEAR') is-invalid @enderror">
+                                    <option value="">เลือกปี่ที่ได้รับ</option>
+                                    @for($i = '2565'; $i < date('Y')+543; $i++)
+                                        <option value="{{$i}}">ปี {{$i}}</option>
+                                    @endfor
+                                    <option value="{{$i}}">ปี {{$i}}</option>
+                                </select>
+                                <x-error-message title="HOUSEHOLD_INFO_PROVINCE"/>
                             </div>
+
                             <div class="form-group col-md-6 mb-6">
                                 <label class="red-start">วันที่ได้รับ</label>
                                 <input type="date" class="form-control @error('HE_DATE') is-invalid @enderror" name="HE_DATE" value="" placeholder="วันเดิอนปีที่ได้รับ"/>

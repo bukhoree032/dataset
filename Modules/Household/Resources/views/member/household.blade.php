@@ -55,20 +55,14 @@
                     @else
                     <td width="1">{{ $data->firstItem() + $index }}</td>
                     @endif
-                    
-                    @if(isset($lists))
-                        <td width="1">{{ $lists->firstItem() + $index }}</td>
-                    @else
-                        <td width="1">{{ $index+1 }}</td>
-                    @endif
                     <td>{{ $value->H_YEAR }}</td>
                     <td>{{ $value->H_ID }}</td>
                     <td>{{ $value->H_NAME }}</td>
                     <td>{{ $value->H_HOUSE_NUMBER }}</td>
                     <td>{{ $value->H_MOO }}</td>
-                    <td>{{ $value->H_PROVINCE }}</td>
-                    <td>{{ $value->H_AMPHURE }}</td>
                     <td>{{ $value->H_DISTRICT }}</td>
+                    <td>{{ $value->H_AMPHURE }}</td>
+                    <td>{{ $value->H_PROVINCE }}</td>
                     <td>{{ $value->H_TEL }}</td>
                     <td class="text-nowrap text-center">{{ $value->H_ACTIVITY }}</td>
                     <td width="1">
