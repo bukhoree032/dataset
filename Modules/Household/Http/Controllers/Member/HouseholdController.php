@@ -86,6 +86,28 @@ class HouseholdController extends BaseMemberManageController
 
         return $this->render('household::member.index', $data);
     }
+    
+    /**
+     * Method index
+     *
+     * @param Request $request [explicite description]
+     *
+     * @return void
+     */
+    public function search(Request $request)
+    {
+        // $request->search
+        $data['data'] = \DB::table('household')
+            ->where('H_ID', 'LIKE','%'.$request->search.'%' )
+            ->orwhere('H_NAME', 'LIKE','%'.$request->search.'%' )
+            ->orwhere('H_DISTRICT', 'LIKE','%'.$request->search.'%' )
+            ->orwhere('H_AMPHURE', 'LIKE','%'.$request->search.'%' )
+            ->orwhere('H_PROVINCE', 'LIKE','%'.$request->search.'%' )
+            ->orderBy('id','DESC')
+            // ->whereBetween('household_members.created_at', [$day, $today])
+            ->get();
+        return $this->render('household::member.household', $data);
+    }
 
     private function getApproveds()
     {

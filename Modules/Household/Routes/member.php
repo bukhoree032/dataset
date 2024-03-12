@@ -17,6 +17,7 @@ Route::prefix('member')->name('member.')->namespace('Member')->group(function ()
             Route::get('/', 'HouseholdController@index')->name('index');
 
             Route::get('/house/{id}', 'HouseholdController@house')->name('house');
+            Route::put('/house/search', 'HouseholdController@search')->name('house.search');
             
             Route::get('/help/{id}', 'HelpController@index')->name('help');
             Route::post('help/create', 'HelpController@help')->name('help.help');
