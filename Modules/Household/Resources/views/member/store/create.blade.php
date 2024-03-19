@@ -57,24 +57,24 @@
                                 <div class="form-row mb-3">
                                     <div class="form-group col-md-2">
                                         <label class="red-start">หมู่ที่</label>
-                                        <input type="text" class="form-control @error('HOUSEHOLD_INFO_MOO') is-invalid @enderror" name="HOUSEHOLD_INFO_MOO" value="{{ old('HOUSEHOLD_INFO_MOO') }}" placeholder="หมู่ที่"/>
+                                        <input type="text" class="form-control @error('HOUSEHOLD_INFO_MOO') is-invalid @enderror" name="HOUSEHOLD_INFO_MOO" value="{{ $result->H_MOO }}" placeholder="หมู่ที่"/>
                                         <x-error-message title="HOUSEHOLD_INFO_MOO"/>
                                     </div>
                                     <div class="form-group col-md-5">
                                         <label class="red-start">ชื่อหมู่บ้าน</label>
-                                        <input type="text" class="form-control @error('HOUSEHOLD_INFO_VIL_NAME') is-invalid @enderror" name="HOUSEHOLD_INFO_VIL_NAME" value="{{ old('HOUSEHOLD_INFO_VIL_NAME') }}" placeholder="ชื่อหมู่บ้าน"/>
+                                        <input type="text" class="form-control @error('HOUSEHOLD_INFO_VIL_NAME') is-invalid @enderror" name="HOUSEHOLD_INFO_VIL_NAME" value="{{ $result->H_VILLAGE }}" placeholder="ชื่อหมู่บ้าน"/>
                                         <x-error-message title="HOUSEHOLD_INFO_VIL_NAME"/>
                                     </div>
                                     <div class="form-group col-md-5">
                                         <label>ชื่อชุมชน</label>
-                                        <input type="text" class="form-control @error('HOUSEHOLD_INFO_COMMU_NAME') is-invalid @enderror" name="HOUSEHOLD_INFO_COMMU_NAME" value="{{ old('HOUSEHOLD_INFO_COMMU_NAME') }}" placeholder="ชื่อชุมชน"/>
+                                        <input type="text" class="form-control @error('HOUSEHOLD_INFO_COMMU_NAME') is-invalid @enderror" name="HOUSEHOLD_INFO_COMMU_NAME" value="{{ $result->H_VILLAGE }}" placeholder="ชื่อชุมชน"/>
                                         <x-error-message title="HOUSEHOLD_INFO_COMMU_NAME"/>
                                     </div>
                                 </div>
                                 <div class="form-row mb-3">
                                     <div class="form-group col-md-1">
                                         <label>บ้านเลขที่</label>
-                                        <input type="text" class="form-control @error('HOUSEHOLD_INFO_ADDRESS') is-invalid @enderror" name="HOUSEHOLD_INFO_ADDRESS" value="{{ old('HOUSEHOLD_INFO_ADDRESS') }}" placeholder="บ้านเลขที่"/>
+                                        <input type="text" class="form-control @error('HOUSEHOLD_INFO_ADDRESS') is-invalid @enderror" name="HOUSEHOLD_INFO_ADDRESS" value="{{ $result->H_HOUSE_NUMBER }}" placeholder="บ้านเลขที่"/>
                                         <x-error-message title="HOUSEHOLD_INFO_ADDRESS"/>
                                     </div>
                                     <div class="form-group col-md-4">
