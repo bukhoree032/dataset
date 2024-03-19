@@ -73,7 +73,7 @@ class StoreRepository extends BaseRepository
         $q = $this->classModelName::query();
 
         if(Auth::guard('member')->check()){
-            $q->where('member_id', Auth::guard('member')->user()->id);
+            // $q->where('member_id', Auth::guard('member')->user()->id);
         }
 
         if (empty($sort)) {
