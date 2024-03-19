@@ -32,10 +32,10 @@
                                 <label class="red-start">ปี่ที่ได้รับ</label>
                                 <select name="HE_YEAR" class="form-control @error('HE_YEAR') is-invalid @enderror">
                                     <option value="">เลือกปี่ที่ได้รับ</option>
-                                    @for($i = '2565'; $i < date('Y')+543; $i++)
+                                    @for($i = '2567'; $i <= date('Y')+544; $i++)
                                         <option value="{{$i}}">ปี {{$i}}</option>
                                     @endfor
-                                    <option value="{{$i}}">ปี {{$i}}</option>
+                                    {{-- <option value="{{$i}}">ปี {{$i}}</option> --}}
                                 </select>
                                 <x-error-message title="HOUSEHOLD_INFO_PROVINCE"/>
                             </div>
