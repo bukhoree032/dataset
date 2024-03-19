@@ -37,7 +37,6 @@
                     <td>{{ $value->STORE_CHECK }}</td>
                     <td>{{ $value->STORE_SAVE }}</td>
                     <td width="1" class="text-nowrap text-center">{{ $value->STORE_DATE }}</td>
-                    <td width="1" class="text-nowrap text-center">{{ $value->created_at }}</td>
                     <td width="1" class="text-nowrap text-center">
                         <div class="d-inline ml-2">
                             @if(isset($approveds[$value->id]['info']))
@@ -120,81 +119,88 @@
                     </td>
                     <td width="1">
                         <div class="option-link">
+                            
                             <form method="POST" action="{{ route('member.household.store.destroy', $value->id) }}">
-                                <div class="btn-group btn-group-sm" role="group">
-                                    <a class="btn btn-sm btn-info" href="{{ route('member.household.store.edit', [$value->id]) }}" data-toggle="tooltip">
-                                        แก้ไขข้อมูล</a>
+                                
+                                @if($value->member_id == Auth::guard('member')->user()->id)
                                     <div class="btn-group btn-group-sm" role="group">
-                                        <button class="btn btn-info btn-group-sm dropdown-toggle" id="btnGroupDrop1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            @isset($value->householdInfo->id)
-                                                    <a class="dropdown-item" href="{{ route('member.household.info.edit', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-puzzle-piece"></i> ข้อมูลครัวเรือน</a>
-                                            @else
-                                                    <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-puzzle-piece"></i> ข้อมูลครัวเรือน</a>
-                                            @endisset
-                                            
-                                            @isset($value->householdInfo->id)
-                                                <a class="dropdown-item" href="{{ route('member.household.info.member.index', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-users"></i> สมาชิกในครัวเรือน</a>
-                                            @else
-                                                <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-users"></i> สมาชิกในครัวเรือน</a>
-                                            @endisset
-
-                                            @isset($value->householdInfo->id)
-                                                {{-- edit/info_id--}}
-                                                @isset($value->householdInfo->HouseholdEcon->id)
-                                                    <a class="dropdown-item" href="{{ route('member.household.info.econ.edit', [$value->id, $value->householdInfo->id, $value->householdInfo->HouseholdEcon->id]) }}"><i class="fas fa-chart-line"></i> ส่วนที่ 3</a>
+                                        <a class="btn btn-sm btn-info" href="{{ route('member.household.store.edit', [$value->id]) }}" data-toggle="tooltip">
+                                            แก้ไขข้อมูล</a>
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <button class="btn btn-info btn-group-sm dropdown-toggle" id="btnGroupDrop1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                @isset($value->householdInfo->id)
+                                                        <a class="dropdown-item" href="{{ route('member.household.info.edit', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-puzzle-piece"></i> ข้อมูลครัวเรือน</a>
                                                 @else
-                                                    <a class="dropdown-item" href="{{ route('member.household.info.econ.create', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-chart-line"></i> ส่วนที่ 3</a>
+                                                        <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-puzzle-piece"></i> ข้อมูลครัวเรือน</a>
                                                 @endisset
-                                            @else
-                                                <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-chart-line"></i> ส่วนที่ 3</a>
-                                            @endisset
-                                            
-                                            @isset($value->householdInfo->id)
-                                                {{-- edit/info_id--}}
-                                                @isset($value->householdInfo->HouseholdEnviro->id)
-                                                    <a class="dropdown-item" href="{{ route('member.household.info.enviro.edit', [$value->id, $value->householdInfo->id, $value->householdInfo->HouseholdEnviro->id]) }}"><i class="fas fa-feather-alt"></i> ส่วนที่ 4</a>
+                                                
+                                                @isset($value->householdInfo->id)
+                                                    <a class="dropdown-item" href="{{ route('member.household.info.member.index', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-users"></i> สมาชิกในครัวเรือน</a>
                                                 @else
-                                                    <a class="dropdown-item" href="{{ route('member.household.info.enviro.create', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-feather-alt"></i> ส่วนที่ 4</a>
+                                                    <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-users"></i> สมาชิกในครัวเรือน</a>
                                                 @endisset
-                                            @else
-                                                <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-feather-alt"></i> ส่วนที่ 4</a>
-                                            @endisset
 
-                                            @isset($value->householdInfo->id)
-                                                {{-- edit/info_id--}}
-                                                @isset($value->householdInfo->HouseholdPolitical->id)
-                                                    <a class="dropdown-item" href="{{ route('member.household.info.political.edit', [$value->id, $value->householdInfo->id, $value->householdInfo->HouseholdPolitical->id]) }}"><i class="fas fa-balance-scale"></i> ส่วนที่ 5</a>
+                                                @isset($value->householdInfo->id)
+                                                    {{-- edit/info_id--}}
+                                                    @isset($value->householdInfo->HouseholdEcon->id)
+                                                        <a class="dropdown-item" href="{{ route('member.household.info.econ.edit', [$value->id, $value->householdInfo->id, $value->householdInfo->HouseholdEcon->id]) }}"><i class="fas fa-chart-line"></i> ส่วนที่ 3</a>
+                                                    @else
+                                                        <a class="dropdown-item" href="{{ route('member.household.info.econ.create', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-chart-line"></i> ส่วนที่ 3</a>
+                                                    @endisset
                                                 @else
-                                                    <a class="dropdown-item" href="{{ route('member.household.info.political.create', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-balance-scale"></i> ส่วนที่ 5</a>
+                                                    <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-chart-line"></i> ส่วนที่ 3</a>
                                                 @endisset
-                                            @else
-                                                <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-balance-scale"></i> ส่วนที่ 5</a>
-                                            @endisset
-                                            
-                                            @isset($value->householdInfo->id)
-                                                {{-- edit/info_id--}}
-                                                @isset($value->householdInfo->HouseholdCommunicat->id)
-                                                    <a class="dropdown-item" href="{{ route('member.household.info.communicat.edit', [$value->id, $value->householdInfo->id, $value->householdInfo->HouseholdCommunicat->id]) }}"><i class="fas fa-comments"></i> ส่วนที่ 6</a>
+                                                
+                                                @isset($value->householdInfo->id)
+                                                    {{-- edit/info_id--}}
+                                                    @isset($value->householdInfo->HouseholdEnviro->id)
+                                                        <a class="dropdown-item" href="{{ route('member.household.info.enviro.edit', [$value->id, $value->householdInfo->id, $value->householdInfo->HouseholdEnviro->id]) }}"><i class="fas fa-feather-alt"></i> ส่วนที่ 4</a>
+                                                    @else
+                                                        <a class="dropdown-item" href="{{ route('member.household.info.enviro.create', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-feather-alt"></i> ส่วนที่ 4</a>
+                                                    @endisset
                                                 @else
-                                                    <a class="dropdown-item" href="{{ route('member.household.info.communicat.create', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-comments"></i> ส่วนที่ 6</a>
+                                                    <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-feather-alt"></i> ส่วนที่ 4</a>
                                                 @endisset
-                                            @else
-                                                <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-comments"></i> ส่วนที่ 6</a>
-                                            @endisset
+
+                                                @isset($value->householdInfo->id)
+                                                    {{-- edit/info_id--}}
+                                                    @isset($value->householdInfo->HouseholdPolitical->id)
+                                                        <a class="dropdown-item" href="{{ route('member.household.info.political.edit', [$value->id, $value->householdInfo->id, $value->householdInfo->HouseholdPolitical->id]) }}"><i class="fas fa-balance-scale"></i> ส่วนที่ 5</a>
+                                                    @else
+                                                        <a class="dropdown-item" href="{{ route('member.household.info.political.create', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-balance-scale"></i> ส่วนที่ 5</a>
+                                                    @endisset
+                                                @else
+                                                    <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-balance-scale"></i> ส่วนที่ 5</a>
+                                                @endisset
+                                                
+                                                @isset($value->householdInfo->id)
+                                                    {{-- edit/info_id--}}
+                                                    @isset($value->householdInfo->HouseholdCommunicat->id)
+                                                        <a class="dropdown-item" href="{{ route('member.household.info.communicat.edit', [$value->id, $value->householdInfo->id, $value->householdInfo->HouseholdCommunicat->id]) }}"><i class="fas fa-comments"></i> ส่วนที่ 6</a>
+                                                    @else
+                                                        <a class="dropdown-item" href="{{ route('member.household.info.communicat.create', [$value->id, $value->householdInfo->id]) }}"><i class="fas fa-comments"></i> ส่วนที่ 6</a>
+                                                    @endisset
+                                                @else
+                                                    <a class="dropdown-item" href="{{ route('member.household.info.store', [$value->id]) }}"><i class="fas fa-comments"></i> ส่วนที่ 6</a>
+                                                @endisset
 
 
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endif
                                 @csrf
                                 {{ method_field('DELETE') }}
                                 <a type="button" href="{{ route('member.household.store.detail', $value->id) }}" class="btn btn-sm btn-success">
                                     ดูรายละเอียด
                                 </a>
-                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('ท่านต้องการลบรายการนี้ใช่หรือไม่ ?')">
-                                    ยกเลิก
-                                </button>
+                                
+                                @if($value->member_id == Auth::guard('member')->user()->id)
+                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('ท่านต้องการลบรายการนี้ใช่หรือไม่ ?')">
+                                        ยกเลิก
+                                    </button>
+                                @endif
                             </form>
                         </div>
                     </td>
