@@ -11,6 +11,7 @@ use Modules\Household\Repositories\HouseholdInfoRepository as InfoRepository;
 use Modules\Household\Repositories\HouseholdMemberRepository as MemberRepository;
 use Modules\Household\Repositories\HouseholdEconRepository as EconRepository;
 use Modules\Household\Repositories\HouseholdEnviroRepository as EnviroRepository;
+use Modules\Household\Repositories\HouseholdCommunicatRepository as CommunicatRepository;
 
 class StoreController extends BaseMemberManageController
 {
@@ -20,8 +21,9 @@ class StoreController extends BaseMemberManageController
     protected $MemberRepository;
     protected $EconRepository;
     protected $EnviroRepository;
+    protected $CommunicatRepository;
 
-    public function __construct(Repository $repository,InfoRepository $InfoRepository, MemberRepository $MemberRepository, EconRepository $EconRepository, EnviroRepository $EnviroRepository, HouseholdRepository $HouseholdRepository)
+    public function __construct(Repository $repository,InfoRepository $InfoRepository, MemberRepository $MemberRepository, EconRepository $EconRepository, EnviroRepository $EnviroRepository, HouseholdRepository $HouseholdRepository, CommunicatRepository $CommunicatRepository)
     {
         $this->repository = $repository;
         $this->HouseholdRepository = $HouseholdRepository;
@@ -29,6 +31,7 @@ class StoreController extends BaseMemberManageController
         $this->MemberRepository = $MemberRepository;
         $this->EconRepository = $EconRepository;
         $this->EnviroRepository = $EnviroRepository;
+        $this->CommunicatRepository = $CommunicatRepository;
 
         $this->init([
             'body' => [
@@ -144,6 +147,8 @@ class StoreController extends BaseMemberManageController
         $data['result'] = $this->repository->get($id);
         if(isset($data['result']->householdInfo->householdEcon->id)){
             $data['resultEcon'] = $this->EconRepository->get($data['result']->householdInfo->householdEcon->id);
+
+            $data['communicat'] = $this->CommunicatRepository->get($data['result']->householdInfo->householdEcon->id);
         //     foreach($data['resultEcon']->HOUSEHOLD_ECON_INCOME_TYPE as $index => $value){
         //         $data['INCOME_TYPE'][$index] = format_number($data['resultEcon']->HOUSEHOLD_ECON_INCOME_TYPE[$index]);
         //     }
