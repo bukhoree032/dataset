@@ -13,7 +13,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="row">
-                                    <input type="hidden" class="form-control" name="HE_ID" value="{{$lists->id}}"/>
+                                    <input type="hidden" class="form-control" name="id" value="{{$lists->id}}"/>
+                                    <input type="hidden" class="form-control" name="HE_ID" value="{{$lists->HE_ID}}"/>
                                     
                                     <div class="form-group col-md-12 mb-12">
                                         <label class="red-start">ชื่อ - นามสกุลผู้รับ</label>

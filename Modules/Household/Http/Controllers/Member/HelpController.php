@@ -117,7 +117,7 @@ class HelpController extends BaseMemberManageController
      */
     public function update(Request $request)
     {
-        $result = $this->Repository->update($request->all(), $request->HE_ID);
+        $result = $this->Repository->update($request->all(), $request->id);
 
         return redirect()->route('member.household.help', [$request->HE_ID]);
     }
