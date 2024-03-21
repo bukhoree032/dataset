@@ -85,7 +85,7 @@
                                     </li>
                                     @endforeach
                                     <li>
-                                        <textarea placeholder="กรณีอื่น" name="HOUSEHOLD_ENVIR_H_ENVI_OTHER" value="{{ old('HOUSEHOLD_MEMBER_GENERAL_SKILL_OTHER') }}"></textarea>
+                                        <textarea placeholder="กรณีอื่น" name="HOUSEHOLD_ENVIR_H_ENVI_OTHER">{{ old('HOUSEHOLD_ENVIR_H_ENVI_OTHER') }}</textarea>
                                     </li>
                                 </ul>
                                 <x-error-message title="HOUSEHOLD_ENVIR_H_ENVI" />
@@ -232,7 +232,7 @@
                                     </li>
                                     @endforeach
                                     <li>
-                                        <textarea placeholder="กรณีอื่น" name="HOUSEHOLD_ENVIR_ENV_ACT_OTHER" value="{{ old('HOUSEHOLD_ENVIR_ENV_ACT_OTHER') }}"></textarea>
+                                        <textarea placeholder="กรณีอื่น" name="HOUSEHOLD_ENVIR_ENV_ACT_OTHER">{{ old('HOUSEHOLD_ENVIR_ENV_ACT_OTHER') }}</textarea>
                                     </li>
                                 </ul>
                                 <x-error-message title="HOUSEHOLD_ENVIR_ENV_ACT" />
@@ -268,7 +268,7 @@
                                     </li>
                                     @endforeach
                                     <li>
-                                        <textarea placeholder="กรณีอื่น" name="HOUSEHOLD_ENVIR_CONSERV_OTHER" value="{{ old('HOUSEHOLD_ENVIR_CONSERV_OTHER') }}"></textarea>
+                                        <textarea placeholder="กรณีอื่น" name="HOUSEHOLD_ENVIR_CONSERV_OTHER">{{ old('HOUSEHOLD_ENVIR_CONSERV_OTHER') }}</textarea>
                                     </li>
                                 </ul>
                                 <x-error-message title="HOUSEHOLD_ENVIR_CONSERV" />
@@ -288,7 +288,7 @@
                                     </li>
                                     @endforeach
                                     <li>
-                                        <textarea placeholder="กรณีอื่น" name="HOUSEHOLD_ENVIR_AREA_OCCUP_OTHER" value="{{ old('HOUSEHOLD_ENVIR_AREA_OCCUP_OTHER') }}"></textarea>
+                                        <textarea placeholder="กรณีอื่น" name="HOUSEHOLD_ENVIR_AREA_OCCUP_OTHER">{{ old('HOUSEHOLD_ENVIR_AREA_OCCUP_OTHER') }}</textarea>
                                     </li>
                                 </ul>
                                 <x-error-message title="HOUSEHOLD_ENVIR_DISASTER" />
@@ -306,7 +306,7 @@
                                     </li>
                                     @endforeach
                                     <li>
-                                        <textarea placeholder="กรณีอื่น" name="HOUSEHOLD_ENVIR_SOLUTION_OTHER" value="{{ old('HOUSEHOLD_ENVIR_SOLUTION_OTHER') }}"></textarea>
+                                        <textarea placeholder="กรณีอื่น" name="HOUSEHOLD_ENVIR_SOLUTION_OTHER">{{ old('HOUSEHOLD_ENVIR_SOLUTION_OTHER') }}</textarea>
                                     </li>
                                 </ul>
                                 <x-error-message title="HOUSEHOLD_ENVIR_SOLUTION" />
