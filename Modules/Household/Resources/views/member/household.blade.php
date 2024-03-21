@@ -34,9 +34,9 @@
                     <th class="text-nowrap text-center">ชื่อ - นามสกุล</th>
                     <th class="text-nowrap text-center">บ้านเลขที่</th>
                     <th class="text-nowrap text-center">หมู่</th>
-                    <th class="text-nowrap text-center">ตำบล</th>
-                    <th class="text-nowrap text-center">อำเภอ</th>
                     <th class="text-nowrap text-center">จังหวัด</th>
+                    <th class="text-nowrap text-center">อำเภอ</th>
+                    <th class="text-nowrap text-center">ตำบล</th>
                     <th class="text-nowrap text-center">เบอร์โทรศัพท์</th>
                     <th class="text-nowrap text-center">กิจกรรม</th>
                     <th class="text-nowrap text-center">ดำเนินการ</th>
