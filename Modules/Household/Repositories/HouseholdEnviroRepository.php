@@ -40,10 +40,10 @@ class HouseholdEnviroRepository extends BaseRepository
         $result->HOUSEHOLD_ENVIR_TOXIC  = unserialize($result->HOUSEHOLD_ENVIR_TOXIC);
         $result->HOUSEHOLD_ENVIR_WATER  = unserialize($result->HOUSEHOLD_ENVIR_WATER);
         $result->HOUSEHOLD_ENVIR_DRINKING  = unserialize($result->HOUSEHOLD_ENVIR_DRINKING);
-        $result->HOUSEHOLD_ENVIR_CONTAINER  = unserialize($result->HOUSEHOLD_ENVIR_CONTAINER);
+        // $result->HOUSEHOLD_ENVIR_CONTAINER  = unserialize($result->HOUSEHOLD_ENVIR_CONTAINER);
         $result->HOUSEHOLD_ENVIR_COOKING  = unserialize($result->HOUSEHOLD_ENVIR_COOKING);
         $result->HOUSEHOLD_ENVIR_WATER_USED  = unserialize($result->HOUSEHOLD_ENVIR_WATER_USED);
-        $result->HOUSEHOLD_ENVIR_CONTAINER_USED  = unserialize($result->HOUSEHOLD_ENVIR_CONTAINER_USED);
+        // $result->HOUSEHOLD_ENVIR_CONTAINER_USED  = unserialize($result->HOUSEHOLD_ENVIR_CONTAINER_USED);
         $result->HOUSEHOLD_ENVIR_AREA  = unserialize($result->HOUSEHOLD_ENVIR_AREA);
         $result->HOUSEHOLD_ENVIR_ENV_ACT  = unserialize($result->HOUSEHOLD_ENVIR_ENV_ACT);
         $result->HOUSEHOLD_ENVIR_ELECTRIC  = unserialize($result->HOUSEHOLD_ENVIR_ELECTRIC);

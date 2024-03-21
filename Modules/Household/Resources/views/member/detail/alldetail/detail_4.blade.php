@@ -76,16 +76,16 @@
                         {{ $row.".".$value }}<br>
                     @endforeach
                 </div>
-                <div class="col-md-4 mb-3">
+                {{-- <div class="col-md-4 mb-3">
                     <label><b>7.2 มีภาชนะเก็บกักน้ำอุปโภค(น้ำกิน) สะอาด มีฝาปิด และรักษาความสะอาดอย่างสม่ำเสมอ</b></label>
                     @php $row=0; @endphp
                     @foreach($resultEnviro->HOUSEHOLD_ENVIR_CONTAINER as $index => $value)
                         @php $row++; @endphp
                         {{ $row.".".$value }}<br>
                     @endforeach
-                </div>
+                </div> --}}
                 <div class="col-md-4 mb-3">
-                    <label><b>7.3 จัดบริเวณให้มีที่ประกอบอาหาร และมีน้ำสะอาดในการบริโภค(น้ำกิน)</b></label>
+                    <label><b>7.2 จัดบริเวณให้มีที่ประกอบอาหาร และมีน้ำสะอาดในการบริโภค(น้ำกิน)</b></label>
                     @php $row=0; @endphp
                     @foreach($resultEnviro->HOUSEHOLD_ENVIR_COOKING as $index => $value)
                         @php $row++; @endphp
@@ -95,23 +95,23 @@
             </div>
             <div class="form-row">
                 <div class="col-md-4 mb-3">
-                    <label><b>7.4 มีการบริโภค(น้ำใช้) ที่สะอาดเพียงพอตลอดปี</b></label>
+                    <label><b>7.3 มีการบริโภค(น้ำใช้) ที่สะอาดเพียงพอตลอดปี</b></label>
                     @php $row=0; @endphp
                     @foreach($resultEnviro->HOUSEHOLD_ENVIR_WATER_USED as $index => $value)
                         @php $row++; @endphp
                         {{ $row.".".$value }}<br>
                     @endforeach
                 </div>
-                <div class="col-md-4 mb-3">
+                {{-- <div class="col-md-4 mb-3">
                     <label><b>7.5 มีภาชนะเก็บกักน้ำอุปโภค(น้ำใช้) สะอาด มีฝาปิด และรักษาความสะอาดอย่างสม่ำเสมอ</b></label>
                     @php $row=0; @endphp
                     @foreach($resultEnviro->HOUSEHOLD_ENVIR_CONTAINER_USED as $index => $value)
                         @php $row++; @endphp
                         {{ $row.".".$value }}<br>
                     @endforeach
-                </div>
+                </div> --}}
                 <div class="col-md-4 mb-3">
-                    <label><b>7.6 จัดบริเวณให้มีที่ประกอบอาหาร และมีน้ำสะอาดในการอุปโภค(น้ำใช้)</b></label>
+                    <label><b>7.4 จัดบริเวณให้มีที่ประกอบอาหาร และมีน้ำสะอาดในการอุปโภค(น้ำใช้)</b></label>
                     @php $row=0; @endphp
                     @foreach($resultEnviro->HOUSEHOLD_ENVIR_AREA as $index => $value)
                         @php $row++; @endphp

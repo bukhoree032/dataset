@@ -140,7 +140,7 @@
                                 <x-error-message title="HOUSEHOLD_ENVIR_DRINKING" />
                             </div>
                         </div>
-                        <div class="form-group col-md-4">
+                        {{-- <div class="form-group col-md-4">
                             <label>7.2 มีภาชนะเก็บกักน้ำอุปโภค(น้ำกิน) สะอาด มีฝาปิด และรักษาความสะอาดอย่างสม่ำเสมอ</label>
                             <div class="dropdown-check-list form-control" tabindex="100">
                                 <span class="anchor   @error('HOUSEHOLD_ENVIR_CONTAINER') is-invalid @enderror" id="input-CONTAINER"> เลือก </span>
@@ -154,9 +154,9 @@
                                 </ul>
                                 <x-error-message title="HOUSEHOLD_ENVIR_CONTAINER" />
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group col-md-4">
-                            <label>7.3 จัดบริเวณให้มีที่ประกอบอาหาร และมีน้ำสะอาดในการบริโภค(น้ำกิน)</label>
+                            <label>7.2 จัดบริเวณให้มีที่ประกอบอาหาร และมีน้ำสะอาดในการบริโภค(น้ำกิน)</label>
                             <div class="dropdown-check-list form-control" tabindex="100">
                                 <span class="anchor   @error('HOUSEHOLD_ENVIR_COOKING') is-invalid @enderror" id="input-COOKING_"> เลือก </span>
                                 <ul class="items">
@@ -174,7 +174,7 @@
                     <br />
                     <div class="row">
                         <div class="form-group col-md-4">
-                            <label>7.4 มีการบริโภค(น้ำใช้) ที่สะอาดเพียงพอตลอดปี</label>
+                            <label>7.3 มีการบริโภค(น้ำใช้) ที่สะอาดเพียงพอตลอดปี</label>
                             <div class="dropdown-check-list form-control" tabindex="100">
                                 <span class="anchor   @error('HOUSEHOLD_ENVIR_WATER_USED') is-invalid @enderror" id="input-WATER_USED_"> เลือก </span>
                                 <ul class="items">
@@ -188,7 +188,7 @@
                                 <x-error-message title="HOUSEHOLD_ENVIR_WATER_USED" />
                             </div>
                         </div>
-                        <div class="form-group col-md-4">
+                        {{-- <div class="form-group col-md-4">
                             <label>7.5 มีภาชนะเก็บกักน้ำอุปโภค(น้ำใช้) สะอาด มีฝาปิด และรักษาความสะอาดอย่างสม่ำเสมอ</label>
                             <div class="dropdown-check-list  form-control" tabindex="100">
                                 <span class="anchor  @error('HOUSEHOLD_ENVIR_CONTAINER_USED') is-invalid @enderror" id="input-CONTAINER_USED"> เลือก </span>
@@ -202,9 +202,9 @@
                                 </ul>
                                 <x-error-message title="HOUSEHOLD_ENVIR_CONTAINER_USED" />
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group col-md-4">
-                            <label>7.6 จัดบริเวณให้มีที่ประกอบอาหาร และมีน้ำสะอาดในการอุปโภค(น้ำใช้)</label>
+                            <label>7.5 จัดบริเวณให้มีที่ประกอบอาหาร และมีน้ำสะอาดในการอุปโภค(น้ำใช้)</label>
                             <div class="dropdown-check-list  form-control" tabindex="100">
                                 <span class="anchor  @error('HOUSEHOLD_ENVIR_AREA') is-invalid @enderror" id="input-AREA_"> เลือก </span>
                                 <ul class="items">

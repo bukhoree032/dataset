@@ -37,10 +37,10 @@ class Step4Export implements FromView, ShouldAutoSize, WithTitle, WithEvents
                 'household_enviros.HOUSEHOLD_ENVIR_TOXIC',
                 'household_enviros.HOUSEHOLD_ENVIR_WATER',
                 'household_enviros.HOUSEHOLD_ENVIR_DRINKING',
-                'household_enviros.HOUSEHOLD_ENVIR_CONTAINER',
+                // 'household_enviros.HOUSEHOLD_ENVIR_CONTAINER',
                 'household_enviros.HOUSEHOLD_ENVIR_COOKING',
                 'household_enviros.HOUSEHOLD_ENVIR_WATER_USED',
-                'household_enviros.HOUSEHOLD_ENVIR_CONTAINER_USED',
+                // 'household_enviros.HOUSEHOLD_ENVIR_CONTAINER_USED',
                 'household_enviros.HOUSEHOLD_ENVIR_AREA',
                 'household_enviros.HOUSEHOLD_ENVIR_ENV_ACT',
                 'household_enviros.HOUSEHOLD_ENVIR_ELECTRIC',
@@ -61,10 +61,10 @@ class Step4Export implements FromView, ShouldAutoSize, WithTitle, WithEvents
             $data[$key]->HOUSEHOLD_ENVIR_TOXIC = unserialize($data[$key]->HOUSEHOLD_ENVIR_TOXIC);
             $data[$key]->HOUSEHOLD_ENVIR_WATER = unserialize($data[$key]->HOUSEHOLD_ENVIR_WATER);
             $data[$key]->HOUSEHOLD_ENVIR_DRINKING = unserialize($data[$key]->HOUSEHOLD_ENVIR_DRINKING);
-            $data[$key]->HOUSEHOLD_ENVIR_CONTAINER = unserialize($data[$key]->HOUSEHOLD_ENVIR_CONTAINER);
+            // $data[$key]->HOUSEHOLD_ENVIR_CONTAINER = unserialize($data[$key]->HOUSEHOLD_ENVIR_CONTAINER);
             $data[$key]->HOUSEHOLD_ENVIR_COOKING = unserialize($data[$key]->HOUSEHOLD_ENVIR_COOKING);
             $data[$key]->HOUSEHOLD_ENVIR_WATER_USED = unserialize($data[$key]->HOUSEHOLD_ENVIR_WATER_USED);
-            $data[$key]->HOUSEHOLD_ENVIR_CONTAINER_USED = unserialize($data[$key]->HOUSEHOLD_ENVIR_CONTAINER_USED);
+            // $data[$key]->HOUSEHOLD_ENVIR_CONTAINER_USED = unserialize($data[$key]->HOUSEHOLD_ENVIR_CONTAINER_USED);
             $data[$key]->HOUSEHOLD_ENVIR_AREA = unserialize($data[$key]->HOUSEHOLD_ENVIR_AREA);
             $data[$key]->HOUSEHOLD_ENVIR_ENV_ACT = unserialize($data[$key]->HOUSEHOLD_ENVIR_ENV_ACT);
             $data[$key]->HOUSEHOLD_ENVIR_ELECTRIC = unserialize($data[$key]->HOUSEHOLD_ENVIR_ELECTRIC);

@@ -144,11 +144,11 @@
                 <td></td>
             @endfor
             
-            @php $row='0'; @endphp
+            {{-- @php $row='0'; @endphp
             @foreach($value->HOUSEHOLD_ENVIR_CONTAINER as $key_COM_ELEC => $value_COM_ELEC)
                 @php $row++; @endphp
                 <td>{{ $key_COM_ELEC }}</td>
-            @endforeach
+            @endforeach --}}
 
             @php $row='0'; @endphp
             @foreach($value->HOUSEHOLD_ENVIR_COOKING as $key_COM_ELEC => $value_COM_ELEC)
@@ -168,11 +168,11 @@
                 <td></td>
             @endfor
             
-            @php $row='0'; @endphp
+            {{-- @php $row='0'; @endphp
             @foreach($value->HOUSEHOLD_ENVIR_CONTAINER_USED as $key_COM_ELEC => $value_COM_ELEC)
                 @php $row++; @endphp
                 <td>{{ $key_COM_ELEC }}</td>
-            @endforeach
+            @endforeach --}}
             
             @php $row='0'; @endphp
             @foreach($value->HOUSEHOLD_ENVIR_AREA as $key_COM_ELEC => $value_COM_ELEC)
