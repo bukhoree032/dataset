@@ -16,7 +16,7 @@
                     <input type="checkbox" name="HOUSEHOLD_ECON_DEPT_FROM_TYPE[{{ $index }}]" class="input-DEPT_FROM_TYPE" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(old("HOUSEHOLD_ECON_DEPT_FROM_TYPE.$index")) checked @endif />
                     {{ $value['label'] }}
                     @if ($value['id']==12)
-                    <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_DEPT_FROM_TYPE_OTHER[{{ $index }}]" value="{{ old('HOUSEHOLD_ECON_DEPT_FROM_TYPE_OTHER.$index') }}"></textarea>
+                    <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_DEPT_FROM_TYPE_OTHER[{{ $index }}]">{{ old("HOUSEHOLD_ECON_DEPT_FROM_TYPE_OTHER.$index") }}</textarea>
                     @else
                     @endif
 
@@ -55,7 +55,7 @@
                     {{ $value['label'] }}
                 </li>
                 @if ($value['id']==8)
-                <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_COMM_BANK_OTHER[{{ $index }}]" value="{{ old('HOUSEHOLD_ECON_COMM_BANK_OTHER.$index') }}"></textarea>
+                <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_COMM_BANK_OTHER[{{ $index }}]" >{{ old("HOUSEHOLD_ECON_COMM_BANK_OTHER.$index") }}</textarea>
                 @else
                 @endif
                 @endforeach
@@ -74,11 +74,11 @@
                     <input type="checkbox" name="HOUSEHOLD_ECON_NONBANK_[{{ $index }}]" class="input-NONBANK_" data-label="{{ $value['label'] }} " value="{{ $value['label'] }}" @if(old("HOUSEHOLD_ECON_NONBANK_.$index")) checked @endif />
                     {{ $value['label'] }}
                     @if ($value['id']==1)
-                    <input type="text" name="HOUSEHOLD_ECON_NONBANK_OTHER[{{ $index }}]" placeholder="ระบุ กรณีตัวเลือกข้อ 1" value="{{ old('HOUSEHOLD_ECON_NONBANK_OTHER.$index') }}" />
+                    <input type="text" name="HOUSEHOLD_ECON_NONBANK_OTHER[{{ $index }}]" placeholder="ระบุ กรณีตัวเลือกข้อ 1" value="{{ old("HOUSEHOLD_ECON_NONBANK_OTHER.$index") }}" />
                     @else
                     @endif
                     @if ($value['id']==3)
-                    <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_NONBANK_OTHER[{{ $index }}]" value="{{ old('HOUSEHOLD_ECON_NONBANK_OTHER.$index') }}"></textarea>
+                    <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_NONBANK_OTHER[{{ $index }}]">{{ old("HOUSEHOLD_ECON_NONBANK_OTHER.$index") }}</textarea>
                     @else
                     @endif
 
@@ -100,7 +100,7 @@
                     {{ $value['label'] }}
                 </li>
                 @if ($value['id']==10)
-                <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_COMMU_FUND_OTHER[{{ $index }}]" value="{{ old('HOUSEHOLD_ECON_COMMU_FUND_OTHER.$index') }}"></textarea>
+                <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_COMMU_FUND_OTHER[{{ $index }}]">{{ old("HOUSEHOLD_ECON_COMMU_FUND_OTHER.$index") }}</textarea>
                 @else
 
                 @endif
@@ -138,12 +138,12 @@
                     <input type="checkbox" name="HOUSEHOLD_ECON_H_SAVING_[{{ $index }}]" class="input-H_SAVING_" data-label="{{ $value['label'] }}" value="{{ $value['label'] }}" @if(old("HOUSEHOLD_ECON_H_SAVING_.$index")) checked @endif />
                     {{ $value['label'] }}
                     @if ($value['id']==6)
-                    <input type="text" name="HOUSEHOLD_ECON_H_SAVING_OTHER[{{ $index }}]" placeholder="ระบุ กรณีตัวเลือกข้อ 6" value="{{ old('HOUSEHOLD_ECON_H_SAVING_OTHER.$index') }}" />
+                    <input type="text" name="HOUSEHOLD_ECON_H_SAVING_OTHER[{{ $index }}]" placeholder="ระบุ กรณีตัวเลือกข้อ 6" value="{{ old("HOUSEHOLD_ECON_H_SAVING_OTHER.$index") }}" />
 
                     @endif
                 </li>
                 @if ($value['id']==15)
-                <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_H_SAVING_OTHER[{{ $index }}]" value="{{ old('HOUSEHOLD_ECON_H_SAVING_OTHER.$index') }}"></textarea>
+                <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_H_SAVING_OTHER[{{ $index }}]">{{ old("HOUSEHOLD_ECON_H_SAVING_OTHER.$index") }}</textarea>
                 @else
 
                 @endif
@@ -167,7 +167,7 @@
                     {{ $value['label'] }}
                 </li>
                 @if ($value['id']==7)
-                <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_OCCUP_PROBLEM_OTHER[{{ $index }}]" value="{{ old('HOUSEHOLD_ECON_OCCUP_PROBLEM_OTHER.$index') }}"></textarea>
+                <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_OCCUP_PROBLEM_OTHER[{{ $index }}]">{{ old("HOUSEHOLD_ECON_OCCUP_PROBLEM_OTHER.$index") }}</textarea>
                 @else
                 @endif
                 @endforeach
@@ -186,7 +186,7 @@
                     {{ $value['label'] }}
                 </li>
                 @if ($value['id']==5)
-                <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_LIVING_PROBLEM_OTHER[{{ $index }}]" value="{{ old('HOUSEHOLD_ECON_LIVING_PROBLEM_OTHER.$index') }}"></textarea>
+                <textarea placeholder="กรณีอื่น ๆ" name="HOUSEHOLD_ECON_LIVING_PROBLEM_OTHER[{{ $index }}]">{{ old("HOUSEHOLD_ECON_LIVING_PROBLEM_OTHER.$index") }}</textarea>
                 @else
                 @endif
                 @endforeach

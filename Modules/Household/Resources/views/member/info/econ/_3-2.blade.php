@@ -11,7 +11,7 @@
                         {{ $value['label'] }}
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="HOUSEHOLD_ECON_HOUSE_NO[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" style="width: 100%; margin-top: 5px;" value="{{ old('HOUSEHOLD_ECON_HOUSE_NO.$index') }}" />
+                        <input type="text" name="HOUSEHOLD_ECON_HOUSE_NO[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" style="width: 100%; margin-top: 5px;" value="{{ old("HOUSEHOLD_ECON_HOUSE_NO.$index") }}" />
                     </div>
                 </div>
                 @endforeach
@@ -32,7 +32,7 @@
                             {{ $value['label'] }}
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="HOUSEHOLD_ECON_LAND_SIZE[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old('HOUSEHOLD_ECON_LAND_SIZE.$index') }}" />
+                            <input type="text" name="HOUSEHOLD_ECON_LAND_SIZE[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old("HOUSEHOLD_ECON_LAND_SIZE.$index") }}" />
                         </div>
                     </div>
                 </li>
@@ -56,7 +56,7 @@
                             <input type="checkbox" name="HOUSEHOLD_ECON_AREA_LIST[{{ $index }}]" value="{{ $value['label'] }}" class="input-AREA_LIST" data-label="{{ $value['label'] }}" @if(old("HOUSEHOLD_ECON_AREA_LIST.$index")) checked @endif /> {{ $value['label'] }}
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="HOUSEHOLD_ECON_AREA_NO[{{ $index }}][0]" style="width: 100%" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old('HOUSEHOLD_ECON_AREA_NO.$index.0') }}" />
+                            <input type="text" name="HOUSEHOLD_ECON_AREA_NO[{{ $index }}][0]" style="width: 100%" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old("HOUSEHOLD_ECON_AREA_NO.$index.0") }}" />
                         </div>
                     </div>
                     @endif
@@ -66,10 +66,10 @@
                             <input type="checkbox" name="HOUSEHOLD_ECON_AREA_LIST[{{ $index }}]" value="{{ $value['label'] }}" class="input-AREA_LIST" data-label="{{ $value['label'] }}" @if(old("HOUSEHOLD_ECON_AREA_LIST.$index")) checked @endif /> {{ $value['label'] }}
                         </div>
                         <div class="col-md-6">
-                            - บ้าน <input type="text" name="HOUSEHOLD_ECON_AREA_NO[{{ $index }}][1]" style="width: 100%" placeholder="หลัง/ไร่/งาน/ตารางวา" value="{{ old('HHOUSEHOLD_ECON_AREA_NO.$index.1') }}" />
+                            - บ้าน <input type="text" name="HOUSEHOLD_ECON_AREA_NO[{{ $index }}][1]" style="width: 100%" placeholder="หลัง/ไร่/งาน/ตารางวา" value="{{ old("HOUSEHOLD_ECON_AREA_NO.$index.1") }}" />
                         </div>
                         <div class="col-md-6">
-                            - ที่ดินทำกิน <input type="text" name="HOUSEHOLD_ECON_AREA_NO[{{ $index }}][2]" style="width: 100%" placeholder="นา/ไร่/สวน/ฟาร์ม" value="{{ old('HOUSEHOLD_ECON_AREA_NO.$index.2') }}" />
+                            - ที่ดินทำกิน <input type="text" name="HOUSEHOLD_ECON_AREA_NO[{{ $index }}][2]" style="width: 100%" placeholder="นา/ไร่/สวน/ฟาร์ม" value="{{ old("HOUSEHOLD_ECON_AREA_NO.$index.2") }}" />
                         </div>
                     </div>
                     @endif
@@ -101,7 +101,7 @@
                             {{ $value['label'] }}
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="HOUSEHOLD_ECON_EQUIPMENT_NUM[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old('HOUSEHOLD_ECON_EQUIPMENT_NUM.$index') }}" />
+                            <input type="text" name="HOUSEHOLD_ECON_EQUIPMENT_NUM[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old("HOUSEHOLD_ECON_EQUIPMENT_NUM.$index") }}" />
                         </div>
                     </div>
                 </li>
@@ -125,7 +125,7 @@
                             {{ $value['label'] }}
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="HOUSEHOLD_ECON_VEHICLE_NUM[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old('HOUSEHOLD_ECON_VEHICLE_NUM.$index') }}" />
+                            <input type="text" name="HOUSEHOLD_ECON_VEHICLE_NUM[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old("HOUSEHOLD_ECON_VEHICLE_NUM.$index") }}" />
                         </div>
                     </div>
                 </li>
@@ -149,7 +149,7 @@
                             {{ $value['label'] }}
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="HOUSEHOLD_ECON_COM_DEVICE_NUM[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old('HOUSEHOLD_ECON_COM_DEVICE_NUM.$index') }}" />
+                            <input type="text" name="HOUSEHOLD_ECON_COM_DEVICE_NUM[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old("HOUSEHOLD_ECON_COM_DEVICE_NUM.$index") }}" />
                         </div>
                     </div>
                 </li>
@@ -174,7 +174,7 @@
                             {{ $value['label'] }}
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="HOUSEHOLD_ECON_PET_NUM[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old('HOUSEHOLD_ECON_PET_NUM.$index') }}" />
+                            <input type="text" name="HOUSEHOLD_ECON_PET_NUM[{{ $index }}]" placeholder="ขนาด/จำนวน/ปริมาณ" value="{{ old("HOUSEHOLD_ECON_PET_NUM.$index") }}" />
                         </div>
                     </div>
                 </li>
