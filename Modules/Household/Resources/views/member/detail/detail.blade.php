@@ -13,7 +13,7 @@
                         <div class="card-body">
                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="pills-step_info-tab" data-toggle="pill" href="#pills-step_info" role="tab" aria-controls="pills-step_info" aria-selected="true">ข้อมูลทั่มไป</a>
+                                    <a class="nav-link active" id="pills-step_info-tab" data-toggle="pill" href="#pills-step_info" role="tab" aria-controls="pills-step_info" aria-selected="true">ข้อมูลทั่วไป</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="pills-step_member-tab" data-toggle="pill" href="#pills-step_member" role="tab" aria-controls="pills-step_member" aria-selected="false">สมาชิกในครัวเรือน</a>
