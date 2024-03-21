@@ -16,7 +16,7 @@
                                 <div class="form-row mb-3">
                                     <div class="form-group col-md-4">
                                         <label class="red-start">จังหวัด</label>
-                                        <select name="HOUSEHOLD_INFO_PROVINCE" class="form-control @error('HOUSEHOLD_INFO_PROVINCE') is-invalid @enderror" ng-model="HOUSEHOLD_INFO_PROVINCE" ng-change="getAmphures(HOUSEHOLD_INFO_PROVINCE)">
+                                        <select name="HOUSEHOLD_INFO_PROVINCE" class="form-control @error('HOUSEHOLD_INFO_PROVINCE') is-invalid @enderror" ng-model="HOUSEHOLD_INFO_PROVINCE" ng-change="getAmphures(HOUSEHOLD_INFO_PROVINCE)" required>
                                             <option value="">เลือกจังหวัด</option>
                                             <option value="75">ยะลา</option>
                                             <option value="76">นราธิวาส</option>
@@ -29,7 +29,7 @@
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="red-start">อำเภอ</label>
-                                        <select name="HOUSEHOLD_INFO_AMPHURE" id="amphure" class="form-control @error('HOUSEHOLD_INFO_AMPHURE') is-invalid @enderror" ng-model="HOUSEHOLD_INFO_AMPHURE" ng-change="getDistricts(HOUSEHOLD_INFO_AMPHURE)">
+                                        <select name="HOUSEHOLD_INFO_AMPHURE" id="amphure" class="form-control @error('HOUSEHOLD_INFO_AMPHURE') is-invalid @enderror" ng-model="HOUSEHOLD_INFO_AMPHURE" ng-change="getDistricts(HOUSEHOLD_INFO_AMPHURE)" required>
                                             <option value="">เลือกอำเภอ</option>
                                             <option value="{% value.id %}" ng-repeat="value in amphures">{% value.name_th %}</option>
                                         </select>
@@ -37,7 +37,7 @@
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="red-start">ตำบล</label>
-                                        <select name="HOUSEHOLD_INFO_DISTRICT" id="district" class="form-control @error('HOUSEHOLD_INFO_DISTRICT') is-invalid @enderror" ng-model="HOUSEHOLD_INFO_DISTRICT">
+                                        <select name="HOUSEHOLD_INFO_DISTRICT" id="district" class="form-control @error('HOUSEHOLD_INFO_DISTRICT') is-invalid @enderror" ng-model="HOUSEHOLD_INFO_DISTRICT" required>
                                             <option value="">เลือกตำบล</option>
                                             <option value="{% value.id %}" ng-repeat="value in districts">{% value.name_th %}</option>
                                         </select>
