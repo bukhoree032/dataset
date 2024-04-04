@@ -9,15 +9,15 @@
             <a class="app-nav__item text-white" target="_blank">
                 <i class="fas fa-phone fa-flip-horizontal"></i>
                 <span class="sm-d-none">
-                    (สายตรง) 063-2285889
+                    (สายตรง) 093-632-3207
                 </span>
             </a>
         </li>
         <li>
-            <a class="app-nav__item text-white" target="_blank">
-                <i class="fas fa-envelope"></i>
+            <a class="app-nav__item text-white" href="{{ asset('assets/images/manual.pdf') }}" >
+                {{-- <i class="fas fa-envelope"></i> --}}
                 <span class="sm-d-none">
-                    lpdc@yru.ac.th
+                    คู่มือการใช้งาน
                 </span>
             </a>
         </li>
