@@ -177,7 +177,7 @@ class BaseRepository
      * @param int $limit
      * @return mixed
      */
-    public function paginate_search($request, $sort = [], $limit = 20)
+    public function paginate_search($request, $sort = [], $limit = 100)
     {
         $q = $this->classModelName::query();
         if (empty($sort)) {
